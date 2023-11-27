@@ -4,4 +4,4 @@ export const colors = {
     blackBlue2: '#241A33',
     gray4: '#B9C0CD',
     mainPurple: '#594673'
-}
+};

@@ -1,28 +1,24 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 
 interface Props {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 function BodyContainer({ children }: Props) {
-  return (
-    <View style={styles.container}>
-      {children}
-    </View>
-    );
+    return <View style={styles.container}>{children}</View>;
 }
 
 export { BodyContainer };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    padding: 16,
-    flexDirection: 'column',
-    width: '100%',
-    borderRadius: 16,
-    marginTop: 8,
-    marginBottom: 16
-  }
+    container: {
+        backgroundColor: '#fff',
+        padding: 16,
+        flexDirection: 'column',
+        width: '100%',
+        borderRadius: 16,
+        marginTop: 8,
+        marginBottom: 16
+    }
 });
