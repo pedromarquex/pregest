@@ -67,7 +67,7 @@ export function Tabs() {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarIcon: ({ focused }) => tabIcon({ focused, route }),
-        tabBarActiveTintColor: colors.mainGreen,
+        tabBarActiveTintColor: colors.mainPurple,
         tabBarInactiveTintColor: colors.gray4,
         tabBarLabelStyle: {
           fontFamily: fonts.medium,

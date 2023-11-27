@@ -14,7 +14,7 @@ export function Title({ text }: Props) {
 const styles = StyleSheet.create({
   bodyText: {
     fontFamily: fonts.semibold,
-    color: colors.blackGreen,
+    color: colors.blackBlue,
     fontSize: 16,
     marginBottom: 16,
     paddingTop: 8

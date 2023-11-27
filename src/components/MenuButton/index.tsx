@@ -32,7 +32,7 @@ function MenuButton({ title, onPress, icon }: Props) {
       <Feather
           name='chevron-right'
           size={24}
-          color={colors.blackGreen}
+          color={colors.blackBlue}
           style={{ marginLeft: 'auto' }}
       />
     </TouchableOpacity>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   title: {
     marginLeft: 20,
     fontSize: 14,
-    color: colors.blackGreen,
+    color: colors.blackBlue,
     fontFamily: fonts.regular,
     maxWidth: '80%'
   },

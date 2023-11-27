@@ -23,7 +23,7 @@ export { BodyText };
 const styles = StyleSheet.create({
   bodyText: {
     fontFamily: fonts.regular,
-    color: colors.blackGreen2,
+    color: colors.blackBlue2,
     fontSize: 16,
     lineHeight: 24,
     marginBottom: 16

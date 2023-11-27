@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     title: {
       fontSize: 16,
       fontFamily: fonts.semibold,
-      color: colors.blackGreen2
+      color: colors.blackBlue2
     },
     empty: {},
   });
