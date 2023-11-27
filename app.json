@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sigest",
-    "slug": "sigest",
+    "name": "pregest",
+    "slug": "pregest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
