@@ -8,9 +8,9 @@ import { Title } from '../../../../components/Title'
 
 export function TransaminasePiruvica (): JSX.Element {
   const contentText = [
-    'Hemoglobina e Hematócrito: a hemoconcentração apoia o diagnóstico de pré-eclâmpsia e é um indicador de gravidade. Os valores podem estar diminuídos, entretanto, se a doença acompanhada de hemólise.\nContagem de Plaquetas: A trombocitopenia sugere pré-eclâmpsia.',
-    'Hematócrito: 35– 46%\nHemoglobina: 12 - 16,0g/dL\nPlaquetas: 140.000- 400.000/mm3',
-    'Interromper gestação se Plaquetas < 100.000/dl\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
+    'O valor igual ou maior que o dobro do valor de referência indica o comprometimento hepático (sugestiva do quadro da síndrome de HELLP).',
+    '10- 31 U/L.',
+    'Solicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.\nTGP/ALT >2x acima do limite de normalidade com dor epigástrica ou em hipocôndrio direito é um critério para antecipação terapêutica do parto.'
   ]
 
   const titles = [
@@ -24,7 +24,7 @@ export function TransaminasePiruvica (): JSX.Element {
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Hemograma" />
+        <Title text="Transaminase Pirúvica (TGP/ALT)" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

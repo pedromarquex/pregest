@@ -6,25 +6,23 @@ import { BodyText } from '../../../../components/BodyText'
 import { ReferenceText } from '../../../../components/ReferenceText'
 import { Title } from '../../../../components/Title'
 
-export function TransaminaseGlutamicoOxalacetica (): JSX.Element {
+export function Cardiotocography (): JSX.Element {
   const contentText = [
-    'O valor igual ou maior que o dobro do valor de referência indica o comprometimento hepático (sugestiva da síndrome de HELLP).',
-    '10- 31 U/L.',
-    'Solicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.\nTGO/AST >2x acima do limite de normalidade com dor epigástrica ou em hipocôndrio direito é um critério para antecipação terapêutica do parto.'
+    '30 a 34 semanas: Quinzenalmente\nApós 34 semanas até o parto ou em caso de cardiotocografia reativa: Semanalmente;\nEm caso de mudanças abruptas nas condições maternas-fetais ou em caso de doppler alterada em gestações pré-termo: Imediatamente;\nSempre que houver a necessidade ou a possibilidade de prolongar a gestação.',
+    'Realizar a cardiotocografia com monitorizarão continua ou intermitente da frequência cardíaca fetal durante o trabalho de parto para vigilância do feto;\nAnormalidades na cardiotocografia indica o término da gestação.'
   ]
 
   const titles = [
-    'Justificativa:',
-    'Valores de Referência:',
-    'Recomendações:'
+    'Periodicidade:',
+    'Importante!'
   ]
 
-  const reference = '(BRASIL, 2022; PERAÇOLI, 2020;FEBRASGO, 2019).'
+  const reference = '(QUINTERO-ORTÍZ; GRILLO- ARDILA; AMAYA-GUIO, 2021;PEDROSO,2018)'
 
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Transaminase glutâmico- oxalacética (TGO/AST)" />
+        <Title text="Cardiotocografia" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

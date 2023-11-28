@@ -5,7 +5,11 @@ import { Definition } from '../screens/Definition'
 import { Home } from '../screens/Home'
 import { Classification } from '../screens/classification/Classification'
 import { Exams } from '../screens/exams/Exams'
+import { BioProfile } from '../screens/exams/images/BioProfile'
+import { Cardiotocography } from '../screens/exams/images/Cardiotocography'
+import { Dopplervelocimetry } from '../screens/exams/images/Dopplervelocimetry'
 import { Images } from '../screens/exams/images/Images'
+import { Ultrasson } from '../screens/exams/images/Ultrasson'
 import { Bilirubin } from '../screens/exams/laboratory/Bilirubin'
 import { Creatinine } from '../screens/exams/laboratory/Creatinine'
 import { Desidrogenase } from '../screens/exams/laboratory/Desidrogenase'
@@ -91,13 +95,30 @@ function MyStack (): JSX.Element {
             component={Proteinury}
           />
         </Stack.Group>
-        <Stack.Group>
+        <Stack.Group
+          screenOptions={{
+            header: () => <Header title="Exames de Imagem" />
+          }}
+        >
           <Stack.Screen
             name="Images"
             component={Images}
-            options={{
-              header: () => <Header title="Exames de Imagem" />
-            }}
+          />
+          <Stack.Screen
+            name="Ultrasson"
+            component={Ultrasson}
+          />
+          <Stack.Screen
+            name="Dopplervelocimetry"
+            component={Dopplervelocimetry}
+          />
+          <Stack.Screen
+            name="BioProfile"
+            component={BioProfile}
+          />
+          <Stack.Screen
+            name="Cardiotocography"
+            component={Cardiotocography}
           />
         </Stack.Group>
       </Stack.Group>

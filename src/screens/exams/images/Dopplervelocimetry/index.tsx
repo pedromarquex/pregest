@@ -6,25 +6,23 @@ import { BodyText } from '../../../../components/BodyText'
 import { ReferenceText } from '../../../../components/ReferenceText'
 import { Title } from '../../../../components/Title'
 
-export function TransaminaseGlutamicoOxalacetica (): JSX.Element {
+export function Dopplervelocimetry (): JSX.Element {
   const contentText = [
-    'O valor igual ou maior que o dobro do valor de referência indica o comprometimento hepático (sugestiva da síndrome de HELLP).',
-    '10- 31 U/L.',
-    'Solicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.\nTGO/AST >2x acima do limite de normalidade com dor epigástrica ou em hipocôndrio direito é um critério para antecipação terapêutica do parto.'
+    'No momento do diagnóstico;\nFeto sem alteração: Quinzenalmente;\nPaciente em conduta conservadora: Semanalmente;\nEm caso de mudanças abruptas nas condições maternas-fetais: Imediatamente.',
+    'Doppler da artéria umbilical com fluxo dialóstico ausente ou reverso, Doppler umbilical alterado, principalmente se presente também Doppler alterado nas duas artérias uterinas maternas, Doppler venoso com onda A patológica indicam resolução imediata da gestação.'
   ]
 
   const titles = [
-    'Justificativa:',
-    'Valores de Referência:',
-    'Recomendações:'
+    'Periodicidade:',
+    'Importante!'
   ]
 
-  const reference = '(BRASIL, 2022; PERAÇOLI, 2020;FEBRASGO, 2019).'
+  const reference = '(QUINTERO-ORTÍZ; GRILLO- ARDILA; AMAYA-GUIO, 2021;PEDROSO,2018)'
 
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Transaminase glutâmico- oxalacética (TGO/AST)" />
+        <Title text="Dopplervelocimetria" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

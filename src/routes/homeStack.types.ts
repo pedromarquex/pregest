@@ -23,6 +23,10 @@ export interface RootStackParamList {
   Proteinury: undefined
 
   Images: undefined
+  Ultrasson: undefined
+  Dopplervelocimetry: undefined
+  BioProfile: undefined
+  Cardiotocography: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

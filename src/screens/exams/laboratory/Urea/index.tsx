@@ -8,9 +8,9 @@ import { Title } from '../../../../components/Title'
 
 export function Urea (): JSX.Element {
   const contentText = [
-    'Hemoglobina e Hematócrito: a hemoconcentração apoia o diagnóstico de pré-eclâmpsia e é um indicador de gravidade. Os valores podem estar diminuídos, entretanto, se a doença acompanhada de hemólise.\nContagem de Plaquetas: A trombocitopenia sugere pré-eclâmpsia.',
-    'Hematócrito: 35– 46%\nHemoglobina: 12 - 16,0g/dL\nPlaquetas: 140.000- 400.000/mm3',
-    'Interromper gestação se Plaquetas < 100.000/dl\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
+    'Estratifica a gravidade da doença. Deve ser solicitado quando houver nítido comprometimento renal ou suspeita de síndrome hemolítico-urêmica.',
+    '15- 36 mg/ dL.',
+    'A dosagem de ureia não deve ser efetuada de rotina, exceto quando se suspeita de falência renal e síndrome hemolítico-urêmica.\nInterromper gestação se houver insuficiência renal evidenciada principalmente por elevação progressiva dos níveis de ureia e creatinina, oligúria e anasarca.'
   ]
 
   const titles = [

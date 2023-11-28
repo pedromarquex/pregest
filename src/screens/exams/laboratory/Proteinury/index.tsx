@@ -8,9 +8,9 @@ import { Title } from '../../../../components/Title'
 
 export function Proteinury (): JSX.Element {
   const contentText = [
-    'Hemoglobina e Hematócrito: a hemoconcentração apoia o diagnóstico de pré-eclâmpsia e é um indicador de gravidade. Os valores podem estar diminuídos, entretanto, se a doença acompanhada de hemólise.\nContagem de Plaquetas: A trombocitopenia sugere pré-eclâmpsia.',
-    'Hematócrito: 35– 46%\nHemoglobina: 12 - 16,0g/dL\nPlaquetas: 140.000- 400.000/mm3',
-    'Interromper gestação se Plaquetas < 100.000/dl\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
+    'Exame utilizado como critério para diagnostico da pré-eclâmpsia.',
+    '< 300mg em urina de 24 horas;\nrelação proteína/creatinina < 0,3 mg/dL;\n< 1g em fita reagente.',
+    'Utilizar para fins clínicos o método de relação proteinúria/creatinúria (mg/dL) em amostra isolada de urina.'
   ]
 
   const titles = [
@@ -24,7 +24,7 @@ export function Proteinury (): JSX.Element {
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Hemograma" />
+        <Title text="Proteinúria" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />
