@@ -4,19 +4,17 @@ import { Header } from '../components/Header'
 import { Definition } from '../screens/Definition'
 import { Home } from '../screens/Home'
 import { Classification } from '../screens/classification/Classification'
-import { Latent } from '../screens/classification/Latent'
-import { Primary } from '../screens/classification/Primary'
-import { Secondary } from '../screens/classification/Secondary'
-import { Tertiary } from '../screens/classification/Tertiary'
-import { Diagnosis } from '../screens/diagnosis/Diagnosis'
-import { DirectExams } from '../screens/diagnosis/directExams/DirectExams'
-import { ImmunologicalTests } from '../screens/diagnosis/immunologicalTests/ImmunologicalTests'
-import { QuickTests } from '../screens/diagnosis/immunologicalTests/treponemalTests/QuickTests'
-import { TreponemalTests } from '../screens/diagnosis/immunologicalTests/treponemalTests/TreponemalTests'
-import { BloodTransmission } from '../screens/transmission/BloodTransmission'
-import { Sexual } from '../screens/transmission/Sexual'
-import { Transmission } from '../screens/transmission/Transmission'
-import { Vertical } from '../screens/transmission/Vertical'
+import { Exams } from '../screens/exams/Exams'
+import { Images } from '../screens/exams/images/Images'
+import { Bilirubin } from '../screens/exams/laboratory/Bilirubin'
+import { Creatinine } from '../screens/exams/laboratory/Creatinine'
+import { Desidrogenase } from '../screens/exams/laboratory/Desidrogenase'
+import { Hemogram } from '../screens/exams/laboratory/Hemogram'
+import { Laboratory } from '../screens/exams/laboratory/Laboratory'
+import { Proteinury } from '../screens/exams/laboratory/Proteinury'
+import { TransaminaseGlutamicoOxalacetica } from '../screens/exams/laboratory/TransaminaseGlutamicoOxalacetica'
+import { TransaminasePiruvica } from '../screens/exams/laboratory/TransaminasePiruvica'
+import { Urea } from '../screens/exams/laboratory/Urea'
 import { type RootStackParamList } from './homeStack.types'
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -33,107 +31,76 @@ function MyStack (): JSX.Element {
         name="Definition"
         component={Definition}
         options={{
-          header: () => <Header title="Definição e etiologia da sífilis" />
+          header: () => <Header title="Conceito e Diagnóstico" />
         }}
       />
       <Stack.Screen
         name="Classification"
         component={Classification}
         options={{
-          header: () => <Header title="Classificação clínica da sífilis" />
+          header: () => <Header title="Classificação da Pressão Arterial​" />
         }}
       />
-      <Stack.Screen
-        name="Primary"
-        component={Primary}
-        options={{
-          header: () => <Header title="Classificação clínica da sífilis" />
-        }}
-      />
-      <Stack.Screen
-        name="Secondary"
-        component={Secondary}
-        options={{
-          header: () => <Header title="Classificação clínica da sífilis" />
-        }}
-      />
-      <Stack.Screen
-        name="Latent"
-        component={Latent}
-        options={{
-          header: () => <Header title="Classificação clínica da sífilis" />
-        }}
-      />
-      <Stack.Screen
-        name="Terciary"
-        component={Tertiary}
-        options={{
-          header: () => <Header title="Classificação clínica da sífilis" />
-        }}
-      />
-      <Stack.Screen
-        name="Transmission"
-        component={Transmission}
-        options={{
-          header: () => <Header title="Transmissão" />
-        }}
-      />
-      <Stack.Screen
-        name="Sexual"
-        component={Sexual}
-        options={{
-          header: () => <Header title="Transmissão" />
-        }}
-      />
-      <Stack.Screen
-        name="Vertical"
-        component={Vertical}
-        options={{
-          header: () => <Header title="Transmissão" />
-        }}
-      />
-      <Stack.Screen
-        name="BloodTransmission"
-        component={BloodTransmission}
-        options={{
-          header: () => <Header title="Transmissão" />
-        }}
-      />
-      <Stack.Screen
-        name="Diagnosis"
-        component={Diagnosis}
-        options={{
-          header: () => <Header title="Diagnóstico" />
-        }}
-      />
-      <Stack.Screen
-        name="DirectExams"
-        component={DirectExams}
-        options={{
-          header: () => <Header title="Exames diretos" />
-        }}
-      />
-      <Stack.Screen
-        name="ImmunologicalTests"
-        component={ImmunologicalTests}
-        options={{
-          header: () => <Header title="Testes imunológicos" />
-        }}
-      />
-      <Stack.Screen
-        name="TreponemalTests"
-        component={TreponemalTests}
-        options={{
-          header: () => <Header title="Testes imunológicos" />
-        }}
-      />
-      <Stack.Screen
-        name="QuickTests"
-        component={QuickTests}
-        options={{
-          header: () => <Header title="Testes imunológicos" />
-        }}
-      />
+      <Stack.Group>
+        <Stack.Screen
+          name="Exams"
+          component={Exams}
+          options={{
+            header: () => <Header title="Exames" />
+          }}
+        />
+        <Stack.Group
+          screenOptions={{
+            header: () => <Header title="Exames Laboratoriais" />
+          }}
+        >
+          <Stack.Screen
+            name="Laboratory"
+            component={Laboratory}
+          />
+          <Stack.Screen
+            name="Hemogram"
+            component={Hemogram}
+          />
+          <Stack.Screen
+            name="Creatinine"
+            component={Creatinine}
+          />
+          <Stack.Screen
+            name="Desidrogenase"
+            component={Desidrogenase}
+          />
+          <Stack.Screen
+            name="Bilirubin"
+            component={Bilirubin}
+          />
+          <Stack.Screen
+            name="Urea"
+            component={Urea}
+          />
+          <Stack.Screen
+            name="TransaminaseGlutamicoOxalacetica"
+            component={TransaminaseGlutamicoOxalacetica}
+          />
+          <Stack.Screen
+            name="TransaminasePiruvica"
+            component={TransaminasePiruvica}
+          />
+          <Stack.Screen
+            name="Proteinury"
+            component={Proteinury}
+          />
+        </Stack.Group>
+        <Stack.Group>
+          <Stack.Screen
+            name="Images"
+            component={Images}
+            options={{
+              header: () => <Header title="Exames de Imagem" />
+            }}
+          />
+        </Stack.Group>
+      </Stack.Group>
     </Stack.Navigator>
   )
 }

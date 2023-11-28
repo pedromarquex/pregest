@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Background } from '../../../components/Background'
-import { BodyContainer } from '../../../components/BodyContainer'
-import { BodyText } from '../../../components/BodyText'
-import { Title } from '../../../components/Title'
+import { Background } from '../../../../components/Background'
+import { BodyContainer } from '../../../../components/BodyContainer'
+import { BodyText } from '../../../../components/BodyText'
+import { Title } from '../../../../components/Title'
 
-export function Vertical (): JSX.Element {
+export function Images (): JSX.Element {
   const contentText = [
     'A sífilis pode ser transmitida da mãe para o feto, em gestantes não tratadas ou tratadas inadequadamente, principalmente intraútero, com taxa de 80%. No entanto, também pode ser transmitida na passagem do feto pelo canal de parto.'
   ]

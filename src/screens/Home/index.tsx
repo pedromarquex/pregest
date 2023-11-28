@@ -8,7 +8,7 @@ import { MenuButton } from '../../components/MenuButton'
 function Home (): JSX.Element {
   const navigation = useNavigation()
   const insets = useSafeAreaInsets()
-  const paddingTop = Platform.OS === 'android' ? 20 + insets.top : 20
+  const paddingTop = Platform.OS === 'android' ? 40 + insets.top : 40
 
   const menuItems = [
     {
@@ -29,15 +29,13 @@ function Home (): JSX.Element {
       title: 'Exames',
       icon: 'pill' as 'pill',
       onPress: () => {
-        navigation.navigate('Transmission')
+        navigation.navigate('Exams')
       }
     },
     {
       title: 'Tratamento Farmacológico​',
       icon: 'pill' as 'pill',
-      onPress: () => {
-        navigation.navigate('Diagnosis')
-      }
+      onPress: () => 1
     },
     {
       title: 'Tratamento não Farmacológico​',

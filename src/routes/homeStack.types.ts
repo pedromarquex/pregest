@@ -10,19 +10,19 @@ export interface RootStackParamList {
   Home: undefined
   Definition: undefined
   Classification: undefined
-  Primary: undefined
-  Secondary: undefined
-  Latent: undefined
-  Terciary: undefined
-  Transmission: undefined
-  Sexual: undefined
-  Vertical: undefined
-  BloodTransmission: undefined
-  Diagnosis: undefined
-  DirectExams: undefined
-  ImmunologicalTests: undefined
-  TreponemalTests: undefined
-  QuickTests: undefined
+  Exams: undefined
+
+  Laboratory: undefined
+  Hemogram: undefined
+  Creatinine: undefined
+  Desidrogenase: undefined
+  Bilirubin: undefined
+  Urea: undefined
+  TransaminaseGlutamicoOxalacetica: undefined
+  TransaminasePiruvica: undefined
+  Proteinury: undefined
+
+  Images: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

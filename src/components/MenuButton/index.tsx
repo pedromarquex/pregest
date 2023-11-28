@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: colors.blackBlue,
     fontFamily: fonts.regular,
-    maxWidth: '80%'
+    maxWidth: '75%'
   }
 })

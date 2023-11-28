@@ -4,25 +4,20 @@ import { StyleSheet } from 'react-native'
 import { Background } from '../../../components/Background'
 import { MenuButton } from '../../../components/MenuButton'
 
-export function Transmission (): JSX.Element {
+export function Exams (): JSX.Element {
   const navigation = useNavigation()
 
   return (
-    <Background style={styles.container}>
+    <Background style={styles.container} contentContainerStyle={styles.contentContainer}>
       <MenuButton
-        title="Sexual"
+        title="Exames Laboratoriais"
         icon="microscope"
-        onPress={() => { navigation.navigate('Sexual') }}
+        onPress={() => { navigation.navigate('Laboratory') }}
       />
       <MenuButton
-        title="Vertical"
+        title="Exames de Imagem"
         icon="microscope"
-        onPress={() => { navigation.navigate('Vertical') }}
-      />
-      <MenuButton
-        title="Sanguínea"
-        icon="microscope"
-        onPress={() => { navigation.navigate('BloodTransmission') }}
+        onPress={() => { navigation.navigate('Images') }}
       />
     </Background>
   )
@@ -32,5 +27,8 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  contentContainer: {
+    paddingTop: 20
   }
 })
