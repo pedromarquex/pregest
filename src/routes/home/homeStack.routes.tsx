@@ -1,29 +1,29 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import { Header } from '../components/Header'
-import { Definition } from '../screens/Definition'
-import { Home } from '../screens/Home'
-import { Classification } from '../screens/classification/Classification'
-import { Exams } from '../screens/exams/Exams'
-import { BioProfile } from '../screens/exams/images/BioProfile'
-import { Cardiotocography } from '../screens/exams/images/Cardiotocography'
-import { Dopplervelocimetry } from '../screens/exams/images/Dopplervelocimetry'
-import { Images } from '../screens/exams/images/Images'
-import { Ultrasson } from '../screens/exams/images/Ultrasson'
-import { Bilirubin } from '../screens/exams/laboratory/Bilirubin'
-import { Creatinine } from '../screens/exams/laboratory/Creatinine'
-import { Desidrogenase } from '../screens/exams/laboratory/Desidrogenase'
-import { Hemogram } from '../screens/exams/laboratory/Hemogram'
-import { Laboratory } from '../screens/exams/laboratory/Laboratory'
-import { Proteinury } from '../screens/exams/laboratory/Proteinury'
-import { TransaminaseGlutamicoOxalacetica } from '../screens/exams/laboratory/TransaminaseGlutamicoOxalacetica'
-import { TransaminasePiruvica } from '../screens/exams/laboratory/TransaminasePiruvica'
-import { Urea } from '../screens/exams/laboratory/Urea'
+import { Header } from '../../components/Header'
+import { Definition } from '../../screens/Definition'
+import { Home } from '../../screens/Home'
+import { Classification } from '../../screens/classification/Classification'
+import { Exams } from '../../screens/exams/Exams'
+import { BioProfile } from '../../screens/exams/images/BioProfile'
+import { Cardiotocography } from '../../screens/exams/images/Cardiotocography'
+import { Dopplervelocimetry } from '../../screens/exams/images/Dopplervelocimetry'
+import { Images } from '../../screens/exams/images/Images'
+import { Ultrasson } from '../../screens/exams/images/Ultrasson'
+import { Bilirubin } from '../../screens/exams/laboratory/Bilirubin'
+import { Creatinine } from '../../screens/exams/laboratory/Creatinine'
+import { Desidrogenase } from '../../screens/exams/laboratory/Desidrogenase'
+import { Hemogram } from '../../screens/exams/laboratory/Hemogram'
+import { Laboratory } from '../../screens/exams/laboratory/Laboratory'
+import { Proteinury } from '../../screens/exams/laboratory/Proteinury'
+import { TransaminaseGlutamicoOxalacetica } from '../../screens/exams/laboratory/TransaminaseGlutamicoOxalacetica'
+import { TransaminasePiruvica } from '../../screens/exams/laboratory/TransaminasePiruvica'
+import { Urea } from '../../screens/exams/laboratory/Urea'
 import { type RootStackParamList } from './homeStack.types'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
-function MyStack (): JSX.Element {
+export function HomeStack (): JSX.Element {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -125,5 +125,3 @@ function MyStack (): JSX.Element {
     </Stack.Navigator>
   )
 }
-
-export { MyStack }

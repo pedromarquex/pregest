@@ -11,20 +11,13 @@ import AssistanceActiveIcon from '../assets/icons/assistance-active-icon.svg'
 import AssistanceIcon from '../assets/icons/assistance-icon.svg'
 import HomeActiveIcon from '../assets/icons/home-active-icon.svg'
 import HomeIcon from '../assets/icons/home-icon.svg'
-import { MyStack } from './homeStack.routes'
+import { AssistanceStack } from './assistance/assistanceStack.routes'
+import { HomeStack } from './home/homeStack.routes'
 
 function About (): JSX.Element {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>About!</Text>
-    </View>
-  )
-}
-
-function Assistance (): JSX.Element {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Assistance!</Text>
     </View>
   )
 }
@@ -45,7 +38,7 @@ function tabIcon ({ focused, route }: tabIconProps): JSX.Element {
     }
     return <HomeIcon width={16} height={18} />
   }
-  if (route.name === 'Assistance') {
+  if (route.name === 'AssistanceStack') {
     if (focused) {
       return <AssistanceActiveIcon width={16} height={18} />
     }
@@ -92,14 +85,14 @@ export function Tabs (): JSX.Element {
     >
       <Tab.Screen
         name="HomeTab"
-        component={MyStack}
+        component={HomeStack}
         options={{
           tabBarLabel: 'Início'
         }}
       />
       <Tab.Screen
-        name="Assistance"
-        component={Assistance}
+        name="AssistanceStack"
+        component={AssistanceStack}
         options={{
           tabBarLabel: 'Direcionamento'
         }}
