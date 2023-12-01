@@ -4,9 +4,9 @@ import { TextInput as PaperInput } from 'react-native-paper'
 import { colors } from '../../@theme/colors'
 import { fonts } from '../../@theme/fonts'
 
-interface Props extends React.ComponentProps<typeof PaperInput> {}
+export interface TextInputProps extends React.ComponentProps<typeof PaperInput> {}
 
-export function TextInput ({ style, ...props }: Props): JSX.Element {
+export function TextInput ({ style, ...props }: TextInputProps): JSX.Element {
   return <PaperInput
       {...props}
       mode='outlined'
