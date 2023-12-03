@@ -27,6 +27,16 @@ export interface RootStackParamList {
   Dopplervelocimetry: undefined
   BioProfile: undefined
   Cardiotocography: undefined
+
+  PharmacologicalTreatment: undefined
+  AntihypertensiveTreatment: undefined
+  Methyldopa: undefined
+  Clonidine: undefined
+  NifedipineRetard: undefined
+  Amlodipine: undefined
+  Hydralazine: undefined
+  Metoprolol: undefined
+  Carvedilol: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

@@ -20,6 +20,15 @@ import { TransaminaseGlutamicoOxalacetica } from '../../screens/exams/laboratory
 import { TransaminasePiruvica } from '../../screens/exams/laboratory/TransaminasePiruvica'
 import { Urea } from '../../screens/exams/laboratory/Urea'
 import { type RootStackParamList } from './homeStack.types'
+import { PharmacologicalTreatment } from '../../screens/pharmacologicalTreatment​/PharmacologicalTreatment'
+import { AntihypertensiveTreatment } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/AntihypertensiveTreatment'
+import { Methyldopa } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Methyldopa'
+import { Clonidine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Clonidine'
+import { NifedipineRetard } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/NifedipineRetard'
+import { Amlodipine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Amlodipine'
+import { Hydralazine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Hydralazine'
+import { Metoprolol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Metoprolol'
+import { Carvedilol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Carvedilol'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -120,6 +129,54 @@ export function HomeStack (): JSX.Element {
             name="Cardiotocography"
             component={Cardiotocography}
           />
+        </Stack.Group>
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento Farmacológico" />
+        }}
+      >
+        <Stack.Screen
+          name="PharmacologicalTreatment"
+          component={PharmacologicalTreatment}
+        />
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento anti-hipertensivo" />
+        }}
+        >
+        <Stack.Screen
+          name="AntihypertensiveTreatment"
+          component={AntihypertensiveTreatment}
+        />
+        <Stack.Screen
+          name="Methyldopa"
+          component={Methyldopa}
+        />
+        <Stack.Screen
+          name="Clonidine"
+          component={Clonidine}
+        />
+        <Stack.Screen
+          name="NifedipineRetard"
+          component={NifedipineRetard}
+        />
+        <Stack.Screen
+          name="Amlodipine"
+          component={Amlodipine}
+        />
+        <Stack.Screen
+          name="Hydralazine"
+          component={Hydralazine}
+        />
+        <Stack.Screen
+          name="Metoprolol"
+          component={Metoprolol}
+        />
+        <Stack.Screen
+          name="Carvedilol"
+          component={Carvedilol}
+        />
         </Stack.Group>
       </Stack.Group>
     </Stack.Navigator>

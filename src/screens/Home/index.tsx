@@ -35,7 +35,7 @@ function Home (): JSX.Element {
     {
       title: 'Tratamento Farmacológico​',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('PharmacologicalTreatment') }
     },
     {
       title: 'Tratamento não Farmacológico​',
