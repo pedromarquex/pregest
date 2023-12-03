@@ -43,6 +43,10 @@ export interface RootStackParamList {
   HydralazineIC: undefined
   Nifedipine: undefined
   SodiumNitroprusside: undefined
+
+  AnticonvulsantTreatment: undefined
+  Pritchard: undefined
+  Zuspan: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

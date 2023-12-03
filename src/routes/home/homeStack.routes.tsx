@@ -34,6 +34,9 @@ import { HydralazineAmpoule } from '../../screens/pharmacologicalTreatment​/tr
 import { HydralazineIC } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineIC'
 import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/Nifedipine'
 import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
+import { AnticonvulsantTreatment } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/AnticonvulsantTreatment'
+import { Pritchard } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Pritchard'
+import { Zuspan } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Zuspan'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -207,6 +210,24 @@ export function HomeStack (): JSX.Element {
         <Stack.Screen
           name="SodiumNitroprusside"
           component={SodiumNitroprusside}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento anticonvulsivo" />
+        }}
+        >
+        <Stack.Screen
+          name="AnticonvulsantTreatment"
+          component={AnticonvulsantTreatment}
+        />
+        <Stack.Screen
+          name="Pritchard"
+          component={Pritchard}
+        />
+        <Stack.Screen
+          name="Zuspan"
+          component={Zuspan}
         />
         </Stack.Group>
       </Stack.Group>
