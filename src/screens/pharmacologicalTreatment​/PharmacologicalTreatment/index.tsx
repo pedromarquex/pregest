@@ -27,7 +27,7 @@ export function PharmacologicalTreatment (): JSX.Element {
       <MenuButton
         title="Corticoterapia"
         icon="pill"
-        onPress={() => { navigation.navigate('Images') }}
+        onPress={() => { navigation.navigate('CorticosteroidTherapy') }}
       />
     </Background>
   )

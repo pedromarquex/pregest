@@ -37,6 +37,9 @@ import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/t
 import { AnticonvulsantTreatment } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/AnticonvulsantTreatment'
 import { Pritchard } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Pritchard'
 import { Zuspan } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Zuspan'
+import { CorticosteroidTherapy } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/CorticosteroidTherapy'
+import { Betamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Betamethasone'
+import { Dexamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Dexamethasone'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -228,6 +231,24 @@ export function HomeStack (): JSX.Element {
         <Stack.Screen
           name="Zuspan"
           component={Zuspan}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Corticoterapia" />
+        }}
+        >
+        <Stack.Screen
+          name="CorticosteroidTherapy"
+          component={CorticosteroidTherapy}
+        />
+        <Stack.Screen
+          name="Betamethasone"
+          component={Betamethasone}
+        />
+        <Stack.Screen
+          name="Dexamethasone"
+          component={Dexamethasone}
         />
         </Stack.Group>
       </Stack.Group>

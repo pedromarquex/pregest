@@ -47,6 +47,10 @@ export interface RootStackParamList {
   AnticonvulsantTreatment: undefined
   Pritchard: undefined
   Zuspan: undefined
+
+  CorticosteroidTherapy: undefined
+  Betamethasone: undefined
+  Dexamethasone: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
