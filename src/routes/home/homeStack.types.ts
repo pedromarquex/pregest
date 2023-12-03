@@ -51,6 +51,11 @@ export interface RootStackParamList {
   CorticosteroidTherapy: undefined
   Betamethasone: undefined
   Dexamethasone: undefined
+
+  NonPharmacologicalTreatment: undefined
+  Diet: undefined
+  Rest: undefined
+  LaboratoryMonitoring: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

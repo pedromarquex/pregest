@@ -40,6 +40,10 @@ import { Zuspan } from '../../screens/pharmacologicalTreatment​/anticonvulsant
 import { CorticosteroidTherapy } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/CorticosteroidTherapy'
 import { Betamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Betamethasone'
 import { Dexamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Dexamethasone'
+import { NonPharmacologicalTreatment } from '../../screens/nonPharmacologicalTreatment/NonPharmacologicalTreatment'
+import { Diet } from '../../screens/nonPharmacologicalTreatment/Diet'
+import { Rest } from '../../screens/nonPharmacologicalTreatment/Rest'
+import { LaboratoryMonitoring } from '../../screens/nonPharmacologicalTreatment/LaboratoryMonitoring'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -251,6 +255,28 @@ export function HomeStack (): JSX.Element {
           component={Dexamethasone}
         />
         </Stack.Group>
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento não Farmacológico" />
+        }}
+      >
+        <Stack.Screen
+          name="NonPharmacologicalTreatment"
+          component={NonPharmacologicalTreatment}
+        />
+        <Stack.Screen
+          name="Diet"
+          component={Diet}
+        />
+        <Stack.Screen
+          name="Rest"
+          component={Rest}
+        />
+        <Stack.Screen
+          name="LaboratoryMonitoring"
+          component={LaboratoryMonitoring}
+        />
       </Stack.Group>
     </Stack.Navigator>
   )
