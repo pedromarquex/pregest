@@ -17,7 +17,7 @@ export function PharmacologicalTreatment (): JSX.Element {
       <MenuButton
         title="Tratamento da crise hipertensiva​"
         icon="pill"
-        onPress={() => { navigation.navigate('Images') }}
+        onPress={() => { navigation.navigate('TreatmentOfHypertensiveCrisis') }}
       />
       <MenuButton
         title="Tratamento anticonvulsivo"

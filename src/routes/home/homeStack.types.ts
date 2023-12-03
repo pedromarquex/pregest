@@ -37,6 +37,12 @@ export interface RootStackParamList {
   Hydralazine: undefined
   Metoprolol: undefined
   Carvedilol: undefined
+
+  TreatmentOfHypertensiveCrisis: undefined
+  HydralazineAmpoule: undefined
+  HydralazineIC: undefined
+  Nifedipine: undefined
+  SodiumNitroprusside: undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

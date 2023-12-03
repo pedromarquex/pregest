@@ -29,6 +29,11 @@ import { Amlodipine } from '../../screens/pharmacologicalTreatment​/antihypert
 import { Hydralazine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Hydralazine'
 import { Metoprolol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Metoprolol'
 import { Carvedilol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Carvedilol'
+import { TreatmentOfHypertensiveCrisis } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/TreatmentOfHypertensiveCrisis'
+import { HydralazineAmpoule } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineAmpoule'
+import { HydralazineIC } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineIC'
+import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/Nifedipine'
+import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -176,6 +181,32 @@ export function HomeStack (): JSX.Element {
         <Stack.Screen
           name="Carvedilol"
           component={Carvedilol}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento da crise hipertensiva" />
+        }}
+        >
+        <Stack.Screen
+          name="TreatmentOfHypertensiveCrisis"
+          component={TreatmentOfHypertensiveCrisis}
+        />
+        <Stack.Screen
+          name="HydralazineAmpoule"
+          component={HydralazineAmpoule}
+        />
+        <Stack.Screen
+          name="HydralazineIC"
+          component={HydralazineIC}
+        />
+        <Stack.Screen
+          name="Nifedipine"
+          component={Nifedipine}
+        />
+        <Stack.Screen
+          name="SodiumNitroprusside"
+          component={SodiumNitroprusside}
         />
         </Stack.Group>
       </Stack.Group>
