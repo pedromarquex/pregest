@@ -1,13 +1,20 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
-import { TextInput as PaperInput } from 'react-native-paper'
+import { StyleSheet, View, type ViewStyle } from 'react-native'
+import { HelperText, TextInput as PaperInput } from 'react-native-paper'
+
 import { colors } from '../../@theme/colors'
 import { fonts } from '../../@theme/fonts'
 
-export interface TextInputProps extends React.ComponentProps<typeof PaperInput> {}
+export interface TextInputProps extends React.ComponentProps<typeof PaperInput> {
+  leftHint?: string
+  containerStyle?: ViewStyle
+}
 
-export function TextInput ({ style, ...props }: TextInputProps): JSX.Element {
-  return <PaperInput
+export function TextInput ({ style, containerStyle, ...props }: TextInputProps): JSX.Element {
+  return <View
+    style={[styles.container, containerStyle]}
+  >
+    <PaperInput
       {...props}
       mode='outlined'
       theme={{
@@ -28,14 +35,21 @@ export function TextInput ({ style, ...props }: TextInputProps): JSX.Element {
       style={[styles.input, style]}
       placeholderTextColor={colors.inputPlaceholder}
       textColor={colors.blackBlue}
+      outlineStyle={{ borderRadius: 10 }}
     />
+    {(props.leftHint != null) && <HelperText type='info' visible={!(props.leftHint.length === 0)}>
+      {props.leftHint}
+    </HelperText>}
+  </View>
 }
 
 const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    marginBottom: 16,
     borderRadius: 10
+  },
+  container: {
+    marginBottom: 16
   }
 })

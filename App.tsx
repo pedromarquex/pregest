@@ -10,8 +10,8 @@ import {
   useFonts
 } from '@expo-google-fonts/montserrat'
 
-import 'react-native-gesture-handler'
-import { PaperProvider } from 'react-native-paper'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { PaperProvider, Portal } from 'react-native-paper'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Tabs } from './src/routes/tabs.routes'
 
@@ -30,10 +30,14 @@ export default function App (): JSX.Element {
   return (
     <SafeAreaProvider>
       <PaperProvider>
-        <NavigationContainer>
-          <StatusBar style="dark" />
-          <Tabs />
-        </NavigationContainer>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+          <Portal.Host>
+            <NavigationContainer>
+              <StatusBar style="dark" />
+              <Tabs />
+            </NavigationContainer>
+          </Portal.Host>
+        </GestureHandlerRootView>
       </PaperProvider>
     </SafeAreaProvider>
   )
