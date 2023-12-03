@@ -20,6 +20,40 @@ import { TransaminaseGlutamicoOxalacetica } from '../../screens/exams/laboratory
 import { TransaminasePiruvica } from '../../screens/exams/laboratory/TransaminasePiruvica'
 import { Urea } from '../../screens/exams/laboratory/Urea'
 import { type RootStackParamList } from './homeStack.types'
+import { PharmacologicalTreatment } from '../../screens/pharmacologicalTreatment​/PharmacologicalTreatment'
+import { AntihypertensiveTreatment } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/AntihypertensiveTreatment'
+import { Methyldopa } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Methyldopa'
+import { Clonidine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Clonidine'
+import { NifedipineRetard } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/NifedipineRetard'
+import { Amlodipine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Amlodipine'
+import { Hydralazine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Hydralazine'
+import { Metoprolol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Metoprolol'
+import { Carvedilol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Carvedilol'
+import { TreatmentOfHypertensiveCrisis } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/TreatmentOfHypertensiveCrisis'
+import { HydralazineAmpoule } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineAmpoule'
+import { HydralazineIC } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineIC'
+import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/Nifedipine'
+import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
+import { AnticonvulsantTreatment } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/AnticonvulsantTreatment'
+import { Pritchard } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Pritchard'
+import { Zuspan } from '../../screens/pharmacologicalTreatment​/anticonvulsantTreatment/Zuspan'
+import { CorticosteroidTherapy } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/CorticosteroidTherapy'
+import { Betamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Betamethasone'
+import { Dexamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Dexamethasone'
+import { NonPharmacologicalTreatment } from '../../screens/nonPharmacologicalTreatment/NonPharmacologicalTreatment'
+import { Diet } from '../../screens/nonPharmacologicalTreatment/Diet'
+import { Rest } from '../../screens/nonPharmacologicalTreatment/Rest'
+import { LaboratoryMonitoring } from '../../screens/nonPharmacologicalTreatment/LaboratoryMonitoring'
+import { AssistanceAndTransfer } from '../../screens/assistanceAndTransfer/AssistanceAndTransfer'
+import { RecommendationsForAssistancees } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/RecommendationsForAssistance'
+import { AirwayAndHelp } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/AirwayAndHelp'
+import { BreathingVentilation } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/BreathingVentilation'
+import { Circulation } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/Circulation'
+import { DamageDisabilities } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/DamageDisabilities'
+import { ExamsE } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/ExamsE'
+import { Fetus } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/Fetus'
+import { TerminatePregnancy } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/TerminatePregnancy'
+import { RecommendationsForTransfer, TerRecommendationsForTransfer } from '../../screens/assistanceAndTransfer/RecommendationsForTransfer'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -119,6 +153,196 @@ export function HomeStack (): JSX.Element {
           <Stack.Screen
             name="Cardiotocography"
             component={Cardiotocography}
+          />
+        </Stack.Group>
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento Farmacológico" />
+        }}
+      >
+        <Stack.Screen
+          name="PharmacologicalTreatment"
+          component={PharmacologicalTreatment}
+        />
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento anti-hipertensivo" />
+        }}
+        >
+        <Stack.Screen
+          name="AntihypertensiveTreatment"
+          component={AntihypertensiveTreatment}
+        />
+        <Stack.Screen
+          name="Methyldopa"
+          component={Methyldopa}
+        />
+        <Stack.Screen
+          name="Clonidine"
+          component={Clonidine}
+        />
+        <Stack.Screen
+          name="NifedipineRetard"
+          component={NifedipineRetard}
+        />
+        <Stack.Screen
+          name="Amlodipine"
+          component={Amlodipine}
+        />
+        <Stack.Screen
+          name="Hydralazine"
+          component={Hydralazine}
+        />
+        <Stack.Screen
+          name="Metoprolol"
+          component={Metoprolol}
+        />
+        <Stack.Screen
+          name="Carvedilol"
+          component={Carvedilol}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento da crise hipertensiva" />
+        }}
+        >
+        <Stack.Screen
+          name="TreatmentOfHypertensiveCrisis"
+          component={TreatmentOfHypertensiveCrisis}
+        />
+        <Stack.Screen
+          name="HydralazineAmpoule"
+          component={HydralazineAmpoule}
+        />
+        <Stack.Screen
+          name="HydralazineIC"
+          component={HydralazineIC}
+        />
+        <Stack.Screen
+          name="Nifedipine"
+          component={Nifedipine}
+        />
+        <Stack.Screen
+          name="SodiumNitroprusside"
+          component={SodiumNitroprusside}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento anticonvulsivo" />
+        }}
+        >
+        <Stack.Screen
+          name="AnticonvulsantTreatment"
+          component={AnticonvulsantTreatment}
+        />
+        <Stack.Screen
+          name="Pritchard"
+          component={Pritchard}
+        />
+        <Stack.Screen
+          name="Zuspan"
+          component={Zuspan}
+        />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Corticoterapia" />
+        }}
+        >
+        <Stack.Screen
+          name="CorticosteroidTherapy"
+          component={CorticosteroidTherapy}
+        />
+        <Stack.Screen
+          name="Betamethasone"
+          component={Betamethasone}
+        />
+        <Stack.Screen
+          name="Dexamethasone"
+          component={Dexamethasone}
+        />
+        </Stack.Group>
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Tratamento não Farmacológico" />
+        }}
+      >
+        <Stack.Screen
+          name="NonPharmacologicalTreatment"
+          component={NonPharmacologicalTreatment}
+        />
+        <Stack.Screen
+          name="Diet"
+          component={Diet}
+        />
+        <Stack.Screen
+          name="Rest"
+          component={Rest}
+        />
+        <Stack.Screen
+          name="LaboratoryMonitoring"
+          component={LaboratoryMonitoring}
+        />
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Assistência e Transferência para Unidade de Referência Hospitalar​" />
+        }}
+      >
+        <Stack.Screen
+          name="AssistanceAndTransfer"
+          component={AssistanceAndTransfer}
+        />
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Recomendações para assistência da paciente" />
+        }}
+        >
+          <Stack.Screen
+            name="RecommendationsForAssistance"
+            component={RecommendationsForAssistancees}
+          />
+          <Stack.Screen
+            name="AirwayAndHelp"
+            component={AirwayAndHelp}
+          />
+          <Stack.Screen
+            name="BreathingVentilation"
+            component={BreathingVentilation}
+          />
+          <Stack.Screen
+            name="Circulation"
+            component={Circulation}
+          />
+          <Stack.Screen
+            name="DamageDisabilities"
+            component={DamageDisabilities}
+          />
+          <Stack.Screen
+            name="ExamsE"
+            component={ExamsE}
+          />
+          <Stack.Screen
+            name="Fetus"
+            component={Fetus}
+          />
+          <Stack.Screen
+            name="TerminatePregnancy"
+            component={TerminatePregnancy}
+          />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Recomendações para transferência da paciente" />
+        }}
+        >
+          <Stack.Screen
+            name="RecommendationsForTransfer"
+            component={RecommendationsForTransfer}
           />
         </Stack.Group>
       </Stack.Group>

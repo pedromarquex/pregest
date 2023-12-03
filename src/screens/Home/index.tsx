@@ -35,18 +35,18 @@ function Home (): JSX.Element {
     {
       title: 'Tratamento Farmacológico​',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('PharmacologicalTreatment') }
     },
     {
       title: 'Tratamento não Farmacológico​',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('NonPharmacologicalTreatment') }
     },
     {
       title:
         'Assistência e Transferência para Unidade de Referência Hospitalar',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('AssistanceAndTransfer') }
     },
     {
       title: 'Referências',
