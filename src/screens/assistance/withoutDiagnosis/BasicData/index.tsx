@@ -110,7 +110,7 @@ export function BasicInfo (): JSX.Element {
       <TextInput
         label="Idade gestacional"
         value={state.name}
-        onChangeText={(text) => { dispatch({ type: 'SET_NAME', payload: text }) }}
+        onChangeText={(text) => { dispatch({ type: 'SET_GESTATIONAL_AGE', payload: text }) }}
         leftHint='Em semanas'
       />
       <Switch
@@ -122,7 +122,7 @@ export function BasicInfo (): JSX.Element {
         items={lastPregnancyOptions}
         label="Última gestação"
         value={lastPregnancyOptions.find((year) => year.value === state.lastPregnancy) ?? { label: '', value: '' }}
-        onChangeText={(item) => { dispatch({ type: 'SET_NAME', payload: item.value }) }}
+        onChangeText={(item) => { dispatch({ type: 'SET_LAST_PREGNANCY', payload: item.value }) }}
         leftHint='Ano'
       />
     </Background>
