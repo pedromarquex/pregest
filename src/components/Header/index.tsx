@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontFamily: fonts.semibold,
-    color: colors.blackBlue2
+    color: colors.blackBlue2,
+    width: '80%'
   },
   empty: {}
 })

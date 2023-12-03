@@ -44,6 +44,15 @@ import { NonPharmacologicalTreatment } from '../../screens/nonPharmacologicalTre
 import { Diet } from '../../screens/nonPharmacologicalTreatment/Diet'
 import { Rest } from '../../screens/nonPharmacologicalTreatment/Rest'
 import { LaboratoryMonitoring } from '../../screens/nonPharmacologicalTreatment/LaboratoryMonitoring'
+import { AssistanceAndTransfer } from '../../screens/assistanceAndTransfer/AssistanceAndTransfer'
+import { RecommendationsForAssistancees } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/RecommendationsForAssistance'
+import { AirwayAndHelp } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/AirwayAndHelp'
+import { BreathingVentilation } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/BreathingVentilation'
+import { Circulation } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/Circulation'
+import { DamageDisabilities } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/DamageDisabilities'
+import { ExamsE } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/ExamsE'
+import { Fetus } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/Fetus'
+import { TerminatePregnancy } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/TerminatePregnancy'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -277,6 +286,54 @@ export function HomeStack (): JSX.Element {
           name="LaboratoryMonitoring"
           component={LaboratoryMonitoring}
         />
+      </Stack.Group>
+      <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Assistência e Transferência para Unidade de Referência Hospitalar​" />
+        }}
+      >
+        <Stack.Screen
+          name="AssistanceAndTransfer"
+          component={AssistanceAndTransfer}
+        />
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Recomendações para assistência da paciente" />
+        }}
+        >
+          <Stack.Screen
+            name="RecommendationsForAssistance"
+            component={RecommendationsForAssistancees}
+          />
+          <Stack.Screen
+            name="AirwayAndHelp"
+            component={AirwayAndHelp}
+          />
+          <Stack.Screen
+            name="BreathingVentilation"
+            component={BreathingVentilation}
+          />
+          <Stack.Screen
+            name="Circulation"
+            component={Circulation}
+          />
+          <Stack.Screen
+            name="DamageDisabilities"
+            component={DamageDisabilities}
+          />
+          <Stack.Screen
+            name="ExamsE"
+            component={ExamsE}
+          />
+          <Stack.Screen
+            name="Fetus"
+            component={Fetus}
+          />
+          <Stack.Screen
+            name="TerminatePregnancy"
+            component={TerminatePregnancy}
+          />
+        </Stack.Group>
       </Stack.Group>
     </Stack.Navigator>
   )

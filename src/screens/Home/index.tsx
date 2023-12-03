@@ -46,7 +46,7 @@ function Home (): JSX.Element {
       title:
         'Assistência e Transferência para Unidade de Referência Hospitalar',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('AssistanceAndTransfer') }
     },
     {
       title: 'Referências',

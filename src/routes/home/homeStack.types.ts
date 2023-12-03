@@ -56,6 +56,17 @@ export interface RootStackParamList {
   Diet: undefined
   Rest: undefined
   LaboratoryMonitoring: undefined
+
+  AssistanceAndTransfer: undefined
+  RecommendationsForAssistance: undefined
+  AirwayAndHelp: undefined
+  BreathingVentilation: undefined
+  Circulation: undefined
+  DamageDisabilities: undefined
+  ExamsE: undefined
+  Fetus: undefined
+  TerminatePregnancy: undefined
+
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =
