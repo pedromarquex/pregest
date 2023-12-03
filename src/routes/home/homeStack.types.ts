@@ -66,6 +66,7 @@ export interface RootStackParamList {
   ExamsE: undefined
   Fetus: undefined
   TerminatePregnancy: undefined
+  RecommendationsForTransfer: undefined
 
 }
 

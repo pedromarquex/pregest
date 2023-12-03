@@ -53,6 +53,7 @@ import { DamageDisabilities } from '../../screens/assistanceAndTransfer/recommen
 import { ExamsE } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/ExamsE'
 import { Fetus } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/Fetus'
 import { TerminatePregnancy } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/TerminatePregnancy'
+import { RecommendationsForTransfer, TerRecommendationsForTransfer } from '../../screens/assistanceAndTransfer/RecommendationsForTransfer'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -332,6 +333,16 @@ export function HomeStack (): JSX.Element {
           <Stack.Screen
             name="TerminatePregnancy"
             component={TerminatePregnancy}
+          />
+        </Stack.Group>
+        <Stack.Group
+        screenOptions={{
+          header: () => <Header title="Recomendações para transferência da paciente" />
+        }}
+        >
+          <Stack.Screen
+            name="RecommendationsForTransfer"
+            component={RecommendationsForTransfer}
           />
         </Stack.Group>
       </Stack.Group>

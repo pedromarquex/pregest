@@ -35,7 +35,7 @@ export function AssistanceAndTransfer (): JSX.Element {
       <MenuButton
         title="Recomendações para transferência da paciente"
         icon="microscope"
-        onPress={() => 1}
+        onPress={() => { navigation.navigate('RecommendationsForTransfer') }}
       />
       <BodyContainer>
         {contentText.map((text, index) => (
