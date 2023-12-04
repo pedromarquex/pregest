@@ -13,6 +13,7 @@ import HomeActiveIcon from '../assets/icons/home-active-icon.svg'
 import HomeIcon from '../assets/icons/home-icon.svg'
 import { AssistanceStack } from './assistance/assistanceStack.routes'
 import { HomeStack } from './home/homeStack.routes'
+import { AboutStack } from './about/aboutStack.routes'
 
 function About (): JSX.Element {
   return (
@@ -44,7 +45,7 @@ function tabIcon ({ focused, route }: tabIconProps): JSX.Element {
     }
     return <AssistanceIcon width={16} height={18} />
   }
-  if (route.name === 'About') {
+  if (route.name === 'AboutStack') {
     if (focused) {
       return <AboutActiveIcon width={16} height={18} />
     }
@@ -98,8 +99,8 @@ export function Tabs (): JSX.Element {
         }}
       />
       <Tab.Screen
-        name="About"
-        component={About}
+        name="AboutStack"
+        component={AboutStack}
         options={{
           tabBarLabel: 'Sobre'
         }}
