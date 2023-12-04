@@ -21,7 +21,7 @@ export function AboutStack (): JSX.Element {
         component={AboutApp}
         options={
           {
-            header: () => <Header title="Sobre o aplicativo" />
+            header: () => <Header title="Sobre o PreGest" />
           }
         }
       />
