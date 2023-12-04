@@ -5,13 +5,15 @@ import { Dropdown } from '../../../../components/Dropdown'
 import { Switch } from '../../../../components/Switch'
 import { TextInput } from '../../../../components/TextInput'
 import { DateInput } from '../../../../components/TextInput/date'
+import { Title } from '../../../../components/Title'
+import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
 
 interface BasicInfoState {
   name: string
   birthDate: string
   race: string
   gestationalAge: string
-  abortionHistory: string
+  abortionHistory: boolean
   lastPregnancy: string
 }
 
@@ -22,10 +24,10 @@ interface BasicInfoAction {
   | 'SET_GESTATIONAL_AGE'
   | 'SET_ABORTION_HISTORY'
   | 'SET_LAST_PREGNANCY'
-  payload: string
+  payload: any
 }
 
-export function BasicInfo (): JSX.Element {
+export function BasicInfo ({ navigation }: AssistanceStackScreenProps<'BasicInfo'>): JSX.Element {
   const [state, dispatch] = useReducer((state: BasicInfoState, action: BasicInfoAction) => {
     switch (action.type) {
       case 'SET_NAME':
@@ -48,7 +50,7 @@ export function BasicInfo (): JSX.Element {
     birthDate: '',
     race: '',
     gestationalAge: '',
-    abortionHistory: 'false',
+    abortionHistory: false,
     lastPregnancy: ''
   })
 
@@ -79,17 +81,24 @@ export function BasicInfo (): JSX.Element {
     value: year.toString()
   })).reverse()
 
+  const navigateToHistory = (): void => {
+    navigation.navigate('History', {
+      data: state
+    })
+  }
+
   return (
     <Background
       contentContainerStyle={{ paddingTop: 36 }}
       bottom={
         <Button
           text='Continuar →'
-          onPress={() => 1}
+          onPress={navigateToHistory}
           style={{ marginHorizontal: 20 }}
         />
       }
     >
+      <Title text='Dados básicos' style={{ paddingTop: 0 }} />
       <TextInput
         label="Nome"
         value={state.name}
@@ -109,13 +118,14 @@ export function BasicInfo (): JSX.Element {
       />
       <TextInput
         label="Idade gestacional"
-        value={state.name}
+        value={state.gestationalAge}
         onChangeText={(text) => { dispatch({ type: 'SET_GESTATIONAL_AGE', payload: text }) }}
         leftHint='Em semanas'
+        keyboardType='numeric'
       />
       <Switch
-        value={state.abortionHistory === 'true'}
-        onToggle={() => { dispatch({ type: 'SET_ABORTION_HISTORY', payload: (state.abortionHistory === 'true') ? 'false' : 'true' }) }}
+        value={state.abortionHistory}
+        onToggle={() => { dispatch({ type: 'SET_ABORTION_HISTORY', payload: !(state.abortionHistory as boolean) }) }}
         text="História de abortamento?"
       />
       <Dropdown
