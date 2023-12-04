@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   container: {
-    marginBottom: 16
+    marginBottom: 16,
+    flexGrow: 1
   }
 })

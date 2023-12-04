@@ -1,17 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, type TextStyle } from 'react-native'
 import { colors } from '../../@theme/colors'
 import { fonts } from '../../@theme/fonts'
 
 interface Props {
   text: string
   withDivider?: boolean
+  style?: TextStyle
 }
 
-function BodyText ({ text, withDivider }: Props): JSX.Element {
+function BodyText ({ text, withDivider, style }: Props): JSX.Element {
   return (
     <>
-      <Text style={styles.bodyText}>{text}</Text>
+      <Text style={[styles.bodyText, style]}>{text}</Text>
       {(withDivider ?? false) && <View style={styles.divider} />}
     </>
   )

@@ -33,12 +33,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.mainPurple,
     height: 50,
-    borderRadius: 10
+    borderRadius: 10,
+    width: 300
   },
   text: {
     fontSize: 16,
     lineHeight: 18,
     color: '#fff',
-    fontFamily: fonts.regular
+    fontFamily: fonts.regular,
+    textAlign: 'center'
   }
 })

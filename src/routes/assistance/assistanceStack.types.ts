@@ -6,9 +6,17 @@ declare global {
   }
 }
 
+interface DataType {
+  data: Record<string, unknown>
+}
+
 export interface AssistanceStackParamList {
   Assistance: undefined
   BasicInfo: undefined
+  History: DataType
+  FirstMeasurement: DataType
+  SecondMeasurement: DataType
+  Result: DataType
 }
 
 export type AssistanceStackScreenProps<Screen extends keyof AssistanceStackParamList> =
