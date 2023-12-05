@@ -28,7 +28,7 @@ function Dialog ({
                       styles.overlay,
                       {
                         backgroundColor: colors.secondaryPurple,
-                        opacity: 1
+                        opacity: 0.97
                       }
                     ]}
                     onPress={() => {

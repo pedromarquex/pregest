@@ -9,6 +9,8 @@ import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
 
 export function Result ({ navigation, route }: AssistanceStackScreenProps<'Result'>): JSX.Element {
+  const [open, setOpen] = React.useState(true)
+
   const contentText = [
     'Prescrever suplementação de cálcio (carbonato de cálcio)- 1,0 a 2,0g/dia, por via oral, preferencialmente antes do almoço e jantar, para mulheres com dieta pobre em cálcio.'
   ]
@@ -32,19 +34,22 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
         <BodyText text={finalText} />
       </BodyContainer>
       <Dialog
-        open
-        setOpen={() => 1}
+        open={open}
+        setOpen={setOpen}
       >
         <View>
           <Title text="ALTO RISCO" style={{ textAlign: 'center' }} />
           <BodyText
-            text="PACIENTE DE ALTO RISCO\nFique atento às intervenções recomendadas"
+            text={`PACIENTE DE ALTO RISCO${'\n'}Fique atento às intervenções recomendadas`}
             style={{ textAlign: 'center' }}
           />
         </View>
         <Button
           text="Ver intervenções"
-          onPress={() => 1}
+          onPress={() => {
+            setOpen(false)
+          }}
+          style={{ width: 300 }}
         />
       </Dialog>
     </Background>

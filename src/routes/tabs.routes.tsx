@@ -11,9 +11,9 @@ import AssistanceActiveIcon from '../assets/icons/assistance-active-icon.svg'
 import AssistanceIcon from '../assets/icons/assistance-icon.svg'
 import HomeActiveIcon from '../assets/icons/home-active-icon.svg'
 import HomeIcon from '../assets/icons/home-icon.svg'
+import { AboutStack } from './about/aboutStack.routes'
 import { AssistanceStack } from './assistance/assistanceStack.routes'
 import { HomeStack } from './home/homeStack.routes'
-import { AboutStack } from './about/aboutStack.routes'
 
 function About (): JSX.Element {
   return (
@@ -88,21 +88,24 @@ export function Tabs (): JSX.Element {
         name="HomeTab"
         component={HomeStack}
         options={{
-          tabBarLabel: 'Início'
+          tabBarLabel: 'Início',
+          unmountOnBlur: true
         }}
       />
       <Tab.Screen
         name="AssistanceStack"
         component={AssistanceStack}
         options={{
-          tabBarLabel: 'Direcionamento'
+          tabBarLabel: 'Direcionamento',
+          unmountOnBlur: true
         }}
       />
       <Tab.Screen
         name="AboutStack"
         component={AboutStack}
         options={{
-          tabBarLabel: 'Sobre'
+          tabBarLabel: 'Sobre',
+          unmountOnBlur: true
         }}
       />
     </Tab.Navigator>

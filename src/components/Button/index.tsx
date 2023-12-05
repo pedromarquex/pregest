@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.mainPurple,
     height: 50,
-    borderRadius: 10,
-    width: 300
+    borderRadius: 10
   },
   text: {
     fontSize: 16,
