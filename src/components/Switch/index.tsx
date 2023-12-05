@@ -81,7 +81,7 @@ const createStyles = (value: boolean) => StyleSheet.create({
     borderRadius: 10
   },
   yesText: {
-    color: value ? '#fff' : colors.gray2
+    color: value ? '#fff' : colors.inputPlaceholder
   },
   noContainer: {
     flex: 1,
@@ -96,6 +96,6 @@ const createStyles = (value: boolean) => StyleSheet.create({
     borderRadius: 10
   },
   noText: {
-    color: value ? colors.gray2 : '#fff'
+    color: value ? colors.inputPlaceholder : '#fff'
   }
 })

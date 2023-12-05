@@ -21,7 +21,8 @@ export function TextInput ({ style, containerStyle, ...props }: TextInputProps):
         colors: {
           background: props.disabled === true
             ? colors.gray4
-            : '#fff'
+            : '#fff',
+          onSurfaceVariant: colors.inputPlaceholder
         },
         fonts: {
           regular: {
@@ -37,9 +38,15 @@ export function TextInput ({ style, containerStyle, ...props }: TextInputProps):
       textColor={colors.blackBlue}
       outlineStyle={{ borderRadius: 10 }}
     />
-    {(props.leftHint != null) && <HelperText type='info' visible={!(props.leftHint.length === 0)}>
+    {(props.leftHint != null) && (
+      <HelperText
+        type='info'
+        visible={!(props.leftHint.length === 0)}
+        style={{ color: colors.inputPlaceholder, paddingTop: 0, paddingLeft: 4 } }
+      >
       {props.leftHint}
-    </HelperText>}
+    </HelperText>
+    )}
   </View>
 }
 
