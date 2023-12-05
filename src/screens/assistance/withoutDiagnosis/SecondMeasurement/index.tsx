@@ -54,7 +54,7 @@ export function SecondMeasurement ({ navigation, route }: AssistanceStackScreenP
 
   return (
     <Background
-      contentContainerStyle={{ paddingTop: 36 }}
+      contentContainerStyle={{ paddingTop: 36, paddingBottom: 150 }}
       bottom={
         <Button
           text='Ver resultado'

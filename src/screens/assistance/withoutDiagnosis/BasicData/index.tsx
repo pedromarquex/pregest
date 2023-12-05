@@ -89,7 +89,7 @@ export function BasicInfo ({ navigation }: AssistanceStackScreenProps<'BasicInfo
 
   return (
     <Background
-      contentContainerStyle={{ paddingTop: 36 }}
+      contentContainerStyle={{ paddingTop: 36, paddingBottom: 150 }}
       bottom={
         <Button
           text='Continuar →'

@@ -58,6 +58,6 @@ const styles = StyleSheet.create({
   },
   container: {
     marginBottom: 16,
-    flexGrow: 1
+    flex: 1
   }
 })

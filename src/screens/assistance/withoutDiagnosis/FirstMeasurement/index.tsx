@@ -64,7 +64,7 @@ export function FirstMeasurement ({ navigation, route }: AssistanceStackScreenPr
 
   return (
     <Background
-      contentContainerStyle={{ paddingTop: 36 }}
+      contentContainerStyle={{ paddingTop: 36, paddingBottom: 150 }}
       bottom={
         <Button
           text='Continuar →'

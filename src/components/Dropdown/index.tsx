@@ -100,7 +100,7 @@ const Dropdown = <Extras, Value>({
         )
       : (
             <TextInput
-                containerStyle={{ marginHorizontal: 20 }}
+                containerStyle={{ marginHorizontal: 20, flex: 0 }}
                 // leftIcon={{
                 //   name: 'chevron-left',
                 //   color: 'white',
@@ -152,7 +152,7 @@ const Dropdown = <Extras, Value>({
                 adjustToContentHeight={adjustModalToContentHeight}
                 modalHeight={
                     !adjustModalToContentHeight
-                      ? Dimensions.get('screen').height * 0.7
+                      ? Dimensions.get('screen').height * 0.9
                       : undefined
                 }
                 handleStyle={styles.modalHandleStyle}

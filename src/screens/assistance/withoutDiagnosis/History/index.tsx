@@ -57,7 +57,7 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
 
   return (
     <Background
-      contentContainerStyle={{ paddingTop: 36 }}
+      contentContainerStyle={{ paddingTop: 36, paddingBottom: 150 }}
       bottom={
         <Button
           text='Continuar →'
