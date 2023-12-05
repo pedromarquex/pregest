@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: fonts.semibold,
     color: colors.blackBlue2,
-    width: '80%'
+    width: '80%',
+    textAlign: 'center'
   },
   empty: {}
 })

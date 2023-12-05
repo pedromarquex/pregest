@@ -1,10 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import { Header } from '../../components/Header'
-import { type AboutStackParamList } from './aboutStack.types'
-import { AboutApp } from '../../screens/about/AboutApp'
 import { About } from '../../screens/about/About'
+import { AboutApp } from '../../screens/about/AboutApp'
 import { Developers } from '../../screens/about/Developers'
+import { type AboutStackParamList } from './aboutStack.types'
 
 const Stack = createStackNavigator<AboutStackParamList>()
 

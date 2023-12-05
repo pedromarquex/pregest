@@ -19,7 +19,7 @@ export function Assistance ({ navigation }: AssistanceStackScreenProps<'Assistan
     {
       title: 'Paciente com diagnóstico de Pré-eclampsia​',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('WithBasicInfo') }
     }
   ]
 

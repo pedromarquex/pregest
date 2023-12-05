@@ -1,11 +1,5 @@
 import { type StackScreenProps } from '@react-navigation/stack'
 
-declare global {
-  namespace ReactNavigation {
-    interface RootParamList extends RootStackParamList {}
-  }
-}
-
 interface DataType {
   data: Record<string, unknown>
 }
@@ -17,6 +11,11 @@ export interface AssistanceStackParamList {
   FirstMeasurement: DataType
   SecondMeasurement: DataType
   Result: DataType
+
+  WithBasicInfo: undefined
+  WithHistory: DataType
+  WithMeasurements: DataType
+  WithResult: DataType
 }
 
 export type AssistanceStackScreenProps<Screen extends keyof AssistanceStackParamList> =
