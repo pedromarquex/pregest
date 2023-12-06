@@ -72,8 +72,6 @@ export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'R
     }
   }
 
-  const finalText = 'Prescrever aspirina em baixa dose (50-150 mg/dia), por via oral, a noite, antes de dormir- Iniciar entre 12 e 16 semanas de gestação e suspender após 36ª semana de gestação;'
-
   return (
     <Background style={styles.container}>
       <BodyContainer>

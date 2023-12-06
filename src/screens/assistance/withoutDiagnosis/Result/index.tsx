@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
@@ -7,6 +7,13 @@ import { Button } from '../../../../components/Button'
 import { Dialog } from '../../../../components/Dialog/dialog'
 import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
+import { type BasicInfoState } from '../BasicData'
+import { type MeasurementsInfoState } from '../FirstMeasurement'
+import { type HistoryState } from '../History'
+
+import dayjs from 'dayjs'
+
+interface Result extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
 enum Risk {
   HIGH_RISK = 'HIGH_RISK',
@@ -21,9 +28,65 @@ enum RiskMapper {
 }
 
 export function Result ({ navigation, route }: AssistanceStackScreenProps<'Result'>): JSX.Element {
+  // receive data from route.params.data and cast it to Result type
+  const data = route.params?.data as unknown as Result
+
+  console.log(JSON.stringify(data, null, 2))
+
   const [open, setOpen] = React.useState(true)
 
   const [risk, setRisk] = useState<Risk>(Risk.HIGH_RISK)
+
+  /*
+  Sem diagnóstico
+
+  Alto risco
+  - Histórico de pré-eclampsia
+  - Gestação múltipla
+  - Obesidade
+  - Hipertensão crônica
+  - Diabetes 1 ou 2
+  - Doença renal
+  - Doenças autoimunes
+
+  Moderado Risco
+  - Nuliparidade
+  - Histórico familiar de pré-eclâmpsia
+  - Baixo nível socioeconômico
+  - Afrodescendente
+  - Idade maior que 35 anos
+  - Histórico de baixo peso ao nascer
+  - Gravidez prévia com efeito adverso
+  - Intervalo maior que 10 anos desde a última gestação
+
+  Baixo risco
+  - Gravidez prévia de risco e sem intercorrências
+
+  */
+
+  const bmi = Number(data.weight) / (Number(data.height) * Number(data.height))
+  useEffect(() => {
+    // HIGH RISK
+    if (
+      data.hasAnteriorPreEclampsia ||
+      data.hasAutoimmuneDisease ||
+      data.hasDiabetes ||
+      data.hasHypertension ||
+      bmi > 30
+    ) {
+      setRisk(Risk.HIGH_RISK)
+    } else if ( // MODERATE RISK
+      data.hasFamilyPreEclampsia &&
+      data.lastPregnancy === '' &&
+      dayjs().diff(dayjs(data.birthDate), 'year') > 35 &&
+      (data.race === 'Preto' || data.race === 'Pardo') &&
+      data.abortionHistory
+    ) {
+      setRisk(Risk.MODERATE_RISK)
+    } else { // LOW RISK
+      setRisk(Risk.LOW_RISK)
+    }
+  }, [])
 
   const contentText = {
     HIGH_RISK: 'Prescrever suplementação de cálcio (carbonato de cálcio)- 1,0 a 2,0g/dia, por via oral, preferencialmente antes do almoço e jantar, para mulheres com dieta pobre em cálcio.',
