@@ -40,7 +40,7 @@ export function AssistanceAndTransfer (): JSX.Element {
       <BodyContainer>
         {contentText.map((text, index) => (
           <View key={index}>
-            <Title text={titles[index]} />
+            <Title text={titles[index]} style={{ textAlign: 'center' }}/>
             <BodyText text={text} withDivider />
           </View>
         ))}

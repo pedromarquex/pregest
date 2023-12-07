@@ -23,12 +23,10 @@ export function Dopplervelocimetry (): JSX.Element {
     <Background style={styles.container}>
       <BodyContainer>
         <Title text="Dopplervelocimetria" />
-        {contentText.map((text, index) => (
-          <View key={index}>
-            <Title text={titles[index]} />
-            <BodyText text={text} withDivider />
-          </View>
-        ))}
+        <Title text={titles[0]} />
+        <BodyText text={contentText[0]} withDivider />
+        <Title text={titles[1]} style={{ textAlign: 'center' }} />
+        <BodyText text={contentText[1]} withDivider />
         <ReferenceText text={reference} />
       </BodyContainer>
     </Background>

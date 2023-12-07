@@ -27,7 +27,7 @@ export function Rest (): JSX.Element {
             <BodyText text={text} withDivider />
           </View>
         ))}
-        <Title text="Não recomendar o repouso absoluto." />
+        <Title text="Não recomendar o repouso absoluto." style={{ textAlign: 'center' }}/>
         <ReferenceText text={reference} />
       </BodyContainer>
     </Background>
