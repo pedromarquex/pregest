@@ -11,7 +11,7 @@ import { type BasicInfoState } from '../BasicData'
 import { type HistoryState } from '../History'
 import { type MeasurementsInfoState } from '../Measurements'
 
-interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
+export interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
 enum Risk {
   WITH_RISK = 'WITH_RISK',

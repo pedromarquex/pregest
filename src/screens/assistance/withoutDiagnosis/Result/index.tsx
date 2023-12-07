@@ -13,7 +13,7 @@ import { type HistoryState } from '../History'
 
 import dayjs from 'dayjs'
 
-interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
+export interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
 enum Risk {
   HIGH_RISK = 'HIGH_RISK',
