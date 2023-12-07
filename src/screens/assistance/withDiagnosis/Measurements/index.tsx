@@ -7,7 +7,7 @@ import { TextInput } from '../../../../components/TextInput'
 import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
 
-interface MeasurementsInfoState {
+export interface MeasurementsInfoState {
   firstRightArmDiastolic: string
   firstRightArmSystolic: string
   firstLeftArmDiastolic: string

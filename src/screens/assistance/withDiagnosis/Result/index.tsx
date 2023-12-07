@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
@@ -7,6 +7,11 @@ import { Button } from '../../../../components/Button'
 import { Dialog } from '../../../../components/Dialog/dialog'
 import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
+import { type BasicInfoState } from '../BasicData'
+import { type HistoryState } from '../History'
+import { type MeasurementsInfoState } from '../Measurements'
+
+interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
 enum Risk {
   WITH_RISK = 'WITH_RISK',
@@ -19,12 +24,52 @@ enum RiskMapper {
 }
 
 export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'Result'>): JSX.Element {
-  const { data } = route.params
+  const data = route.params?.data as unknown as ResultState
   // log data pretified
   // console.log(JSON.stringify(data, null, 2))
 
   const [open, setOpen] = React.useState(true)
   const [risk, setRisk] = React.useState<Risk>(Risk.WITH_RISK)
+
+  /*
+    Com diagnóstico
+
+    Sem sinais
+    - Pressão sistólica: 100 a 140
+    - Diastólica até 85
+    - Paciente clinicamente estável e feto sem alterações
+
+    Com sinais
+    - Pressão sistólica acima de 160
+    - Diastólica acima de 110 confirmada após 15 min (suficiente)
+    - Cefaléia
+    - Alteração visual
+    - Nauseas e vomitos
+    - Dor abdominal
+
+  */
+
+  useEffect(() => {
+    // WITH RISK
+    if (
+      Number(data.firstRightArmSystolic) > 160 ||
+      Number(data.firstRightArmDiastolic) > 110 ||
+      Number(data.firstLeftArmSystolic) > 160 ||
+      Number(data.firstLeftArmDiastolic) > 110 ||
+      Number(data.secondRightArmSystolic) > 160 ||
+      Number(data.secondRightArmDiastolic) > 110 ||
+      Number(data.secondLeftArmSystolic) > 160 ||
+      Number(data.secondLeftArmDiastolic) > 110 ||
+      data.hasHeadache ||
+      data.hasVisualDisturbance ||
+      data.hasNausea ||
+      data.hasAbdominalPain
+    ) {
+      setRisk(Risk.WITH_RISK)
+    } else {
+      setRisk(Risk.WITHOUT_RISK)
+    }
+  }, [])
 
   const modalText = {
     WITHOUT_RISK: 'Manter consulta pré-natal semanalmente.',

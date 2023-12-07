@@ -13,7 +13,7 @@ import { type HistoryState } from '../History'
 
 import dayjs from 'dayjs'
 
-interface Result extends BasicInfoState, MeasurementsInfoState, HistoryState {}
+interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
 enum Risk {
   HIGH_RISK = 'HIGH_RISK',
@@ -29,40 +29,13 @@ enum RiskMapper {
 
 export function Result ({ navigation, route }: AssistanceStackScreenProps<'Result'>): JSX.Element {
   // receive data from route.params.data and cast it to Result type
-  const data = route.params?.data as unknown as Result
+  const data = route.params?.data as unknown as ResultState
 
   console.log(JSON.stringify(data, null, 2))
 
   const [open, setOpen] = React.useState(true)
 
   const [risk, setRisk] = useState<Risk>(Risk.HIGH_RISK)
-
-  /*
-  Sem diagnóstico
-
-  Alto risco
-  - Histórico de pré-eclampsia
-  - Gestação múltipla
-  - Obesidade
-  - Hipertensão crônica
-  - Diabetes 1 ou 2
-  - Doença renal
-  - Doenças autoimunes
-
-  Moderado Risco
-  - Nuliparidade
-  - Histórico familiar de pré-eclâmpsia
-  - Baixo nível socioeconômico
-  - Afrodescendente
-  - Idade maior que 35 anos
-  - Histórico de baixo peso ao nascer
-  - Gravidez prévia com efeito adverso
-  - Intervalo maior que 10 anos desde a última gestação
-
-  Baixo risco
-  - Gravidez prévia de risco e sem intercorrências
-
-  */
 
   const bmi = Number(data.weight) / (Number(data.height) * Number(data.height))
   useEffect(() => {
