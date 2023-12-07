@@ -51,7 +51,7 @@ function Home (): JSX.Element {
     {
       title: 'Referências',
       icon: 'pill' as 'pill',
-      onPress: () => 1
+      onPress: () => { navigation.navigate('References') }
     }
   ]
 

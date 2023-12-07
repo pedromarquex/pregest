@@ -54,6 +54,7 @@ import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentO
 import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
 import { TreatmentOfHypertensiveCrisis } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/TreatmentOfHypertensiveCrisis'
 import { type RootStackParamList } from './homeStack.types'
+import { References } from '../../screens/References'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -346,6 +347,13 @@ export function HomeStack (): JSX.Element {
           />
         </Stack.Group>
       </Stack.Group>
+      <Stack.Screen
+        name="References"
+        component={References}
+        options={{
+          header: () => <Header title="Referências" />
+        }}
+      />
     </Stack.Navigator>
   )
 }
