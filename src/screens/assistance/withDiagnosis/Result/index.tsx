@@ -100,7 +100,7 @@ export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'R
         'Verificar Pressão arterial e orientar a paciente a aferir a pressão arterial diariamente;',
         'Manter controle de peso;',
         'Monitorar semanalmente exames laboratoriais;',
-        'Orientar e acompanhar quanto à dieta monossódica e hiperproteica;',
+        'Orientar e acompanhar quanto à dieta normossódica e hiperproteica;',
         'Orientar períodos de repouso diários em decúbito lateral;',
         'Orientar sobre a importância de entrar em contato (via telefone, telemedicina) ou de procurar hospital em caso de alteração em  quadro clínico;',
         'Orientar e monitorar sinais e sintomas de iminência de eclâmpsia;',

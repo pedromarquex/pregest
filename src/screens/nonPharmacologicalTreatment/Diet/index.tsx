@@ -12,7 +12,7 @@ export function Diet (): JSX.Element {
   ]
 
   const titles = [
-    'Dieta monossódica'
+    'Dieta normossódica'
   ]
 
   const reference = '(BRASIL, 2022; FEBRASGO, 2019; PERAÇILI; 2019).'
