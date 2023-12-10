@@ -26,7 +26,7 @@ export function Dexamethasone (): JSX.Element {
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Dexamethasone" />
+        <Title text="Dexametasona" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

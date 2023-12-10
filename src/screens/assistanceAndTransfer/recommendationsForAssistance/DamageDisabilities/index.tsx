@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { Title } from '../../../../components/Title'
 import { BodyContainer } from '../../../../components/BodyContainer'
@@ -13,7 +13,7 @@ export function DamageDisabilities (): JSX.Element {
   ]
 
   const titles = [
-    'C (Circulação)',
+    'D (Danos - Disabilities)',
     'Atenção!'
   ]
 

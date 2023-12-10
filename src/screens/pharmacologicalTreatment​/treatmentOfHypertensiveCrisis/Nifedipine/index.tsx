@@ -11,7 +11,7 @@ export function Nifedipine (): JSX.Element {
     'Bloqueador de canais de cálcio.',
     'Comprimido de 10mg.',
     'Cefaleia, flushing (rubor) facial, tontura, letargia, taquicardia, náuseas, diarreia.',
-    'Evitar a via sublingual.'
+    'Evitar a via sublingual.\n'
   ]
 
   const titles = [
