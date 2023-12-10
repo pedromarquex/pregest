@@ -37,7 +37,14 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
 
   const [risk, setRisk] = useState<Risk>(Risk.HIGH_RISK)
 
-  const bmi = Number(data.weight) / (Number(data.height) * Number(data.height))
+  const bmi = Number(data.weight) / (Number(data.height) / 100 * Number(data.height) / 100)
+
+  console.log(dayjs().diff(dayjs(
+    data.birthDate.split('/').reverse().join('-')
+  ), 'year') >= 35)
+
+  console.log(dayjs())
+
   useEffect(() => {
     // HIGH RISK
     if (
@@ -51,7 +58,9 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
     } else if ( // MODERATE RISK
       data.hasFamilyPreEclampsia ||
       data.lastPregnancy === '' ||
-      dayjs().diff(dayjs(data.birthDate), 'year') > 35 ||
+      (dayjs().diff(dayjs(
+        data.birthDate.split('/').reverse().join('-')
+      ), 'year') >= 35) ||
       (data.race === 'Preto' || data.race === 'Pardo') ||
       data.abortionHistory
     ) {
