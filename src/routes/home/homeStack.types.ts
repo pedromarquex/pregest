@@ -40,7 +40,6 @@ export interface RootStackParamList {
 
   TreatmentOfHypertensiveCrisis: undefined
   HydralazineAmpoule: undefined
-  HydralazineIC: undefined
   Nifedipine: undefined
   SodiumNitroprusside: undefined
 

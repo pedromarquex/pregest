@@ -9,17 +9,12 @@ export function TreatmentOfHypertensiveCrisis (): JSX.Element {
 
   const menuItems = [
     {
-      title: 'Hidralazina ampola',
+      title: 'Hidralazina',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('HydralazineAmpoule') }
     },
     {
-      title: 'Hidralazina IC',
-      icon: 'pill' as 'pill',
-      onPress: () => { navigation.navigate('HydralazineIC') }
-    },
-    {
-      title: 'Nifedipino​',
+      title: 'Nifedipino',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('Nifedipine') }
     },

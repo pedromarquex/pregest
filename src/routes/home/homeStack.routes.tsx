@@ -49,7 +49,6 @@ import { Betamethasone } from '../../screens/pharmacologicalTreatment​/cortico
 import { CorticosteroidTherapy } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/CorticosteroidTherapy'
 import { Dexamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Dexamethasone'
 import { HydralazineAmpoule } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineAmpoule'
-import { HydralazineIC } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/HydralazineIC'
 import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/Nifedipine'
 import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
 import { TreatmentOfHypertensiveCrisis } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/TreatmentOfHypertensiveCrisis'
@@ -216,10 +215,6 @@ export function HomeStack (): JSX.Element {
         <Stack.Screen
           name="HydralazineAmpoule"
           component={HydralazineAmpoule}
-        />
-        <Stack.Screen
-          name="HydralazineIC"
-          component={HydralazineIC}
         />
         <Stack.Screen
           name="Nifedipine"
