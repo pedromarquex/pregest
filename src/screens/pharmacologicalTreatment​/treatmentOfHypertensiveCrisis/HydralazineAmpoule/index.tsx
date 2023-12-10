@@ -10,7 +10,8 @@ export function HydralazineAmpoule (): JSX.Element {
   const contentText = [
     'Vasodilatador periférico.',
     'Ampola de 20 mg/mL.',
-    'Dose inicial de 5mg via endovenosa; Dose de repetição de 5mg de 20/20 minutos podendo chegar a dose máxima de 45mg.',
+    'Dose inicial de 5mg via intravenosa;\n' +
+    'Dose de repetição de 5mg de 20/20 minutos podendo chegar a dose máxima de 30mg.',
     'Taquicardia, flushing (rubor) facial, cefaleia.',
     'Diluir uma ampola (1 mL) em 19 mL de água destilada, assim, obtendo a concentração de 1 mg/mL.'
   ]

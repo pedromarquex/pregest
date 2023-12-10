@@ -1,10 +1,15 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
 import { BodyText } from '../../../../components/BodyText'
 import { ReferenceText } from '../../../../components/ReferenceText'
 import { Title } from '../../../../components/Title'
+import { Dialog } from '../../../../components/Dialog/dialog'
+import { ButtonGhost } from '../../../../components/ButtonGhost'
+
+import InfusionTable from '../../../../assets/img/infusion-table.png'
+import { Button } from '../../../../components/Button'
 
 export function SodiumNitroprusside (): JSX.Element {
   const contentText = [
@@ -25,16 +30,45 @@ export function SodiumNitroprusside (): JSX.Element {
 
   const reference = 'PERAÇOLI et al., 2019; BRASIL, 2022).'
 
+  const [open, setOpen] = React.useState(false)
+
   return (
     <Background style={styles.container}>
       <BodyContainer>
         <Title text="Nifedipino" />
-        {contentText.map((text, index) => (
-          <View key={index}>
-            <Title text={titles[index]} />
-            <BodyText text={text} withDivider />
-          </View>
-        ))}
+        <Title text={titles[0]} />
+        <BodyText text={contentText[0]} withDivider />
+        <Title text={titles[1]} />
+        <BodyText text={contentText[1]} withDivider />
+        <Title text={titles[2]} />
+        <BodyText text={contentText[2]} withDivider />
+        <Title text={titles[3]} />
+        <BodyText text={contentText[3]} withDivider />
+        <Title text={titles[4]} />
+        <BodyText text={contentText[4]} withDivider />
+        <ButtonGhost
+          text="Ver Imagem"
+          onPress={() => { setOpen(true) }}
+        />
+        <Dialog
+          open={open}
+          setOpen={setOpen}
+          >
+            <Image
+              source={InfusionTable}
+              width={200}
+              height={200}
+              resizeMode="contain"
+            />
+            <Button
+              text="Fechar"
+              onPress={() => { setOpen(false) }}
+              style={{
+                width: 300,
+                marginTop: 20
+              }}
+            />
+          </Dialog>
         <ReferenceText text={reference} />
       </BodyContainer>
     </Background>

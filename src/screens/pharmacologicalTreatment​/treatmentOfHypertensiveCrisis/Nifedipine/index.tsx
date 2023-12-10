@@ -10,13 +10,17 @@ export function Nifedipine (): JSX.Element {
   const contentText = [
     'Bloqueador de canais de cálcio.',
     'Comprimido de 10mg.',
+    'Dose inicial de 10mg via oral;\n' +
+    'Dose de repetição de 10mg de 20-30 minutos podendo chegar a dose máxima de 30mg.',
     'Cefaleia, flushing (rubor) facial, tontura, letargia, taquicardia, náuseas, diarreia.',
-    'Evitar a via sublingual.\n'
+    'Se necessário, repetir dose a cada 20 a 30 minutos (dose máxima de 30 mg).\n' +
+    'Evitar a via sublingual.'
   ]
 
   const titles = [
     'Classe do Agente:',
     'Apresentação:',
+    'Esquema de administração:',
     'Principais efeitos adversos:',
     'Nota:'
   ]
