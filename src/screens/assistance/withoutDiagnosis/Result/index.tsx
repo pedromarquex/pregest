@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
@@ -12,6 +12,7 @@ import { type MeasurementsInfoState } from '../FirstMeasurement'
 import { type HistoryState } from '../History'
 
 import dayjs from 'dayjs'
+import { ButtonGhost } from '../../../../components/ButtonGhost'
 
 export interface ResultState extends BasicInfoState, MeasurementsInfoState, HistoryState {}
 
@@ -31,13 +32,42 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
   // receive data from route.params.data and cast it to Result type
   const data = route.params?.data as unknown as ResultState
 
-  console.log(JSON.stringify(data, null, 2))
+  // console.log(JSON.stringify(data, null, 2))
 
   const [open, setOpen] = React.useState(true)
 
   const [risk, setRisk] = useState<Risk>(Risk.HIGH_RISK)
 
-  const bmi = Number(data.weight) / (Number(data.height) * Number(data.height))
+  const bmi = Number(data.weight) / (Number(data.height) / 100 * Number(data.height) / 100)
+
+  const riskCount = useMemo(() => {
+    // HIGH RISK
+    /*
+      data.hasFamilyPreEclampsia ||
+      data.lastPregnancy === '' ||
+      (dayjs().diff(dayjs(
+        data.birthDate.split('/').reverse().join('-')
+      ), 'year') >= 35) ||
+      (data.race === 'Preto' || data.race === 'Pardo') ||
+      data.abortionHistory
+    */
+    let count = 0
+    if (data.hasFamilyPreEclampsia) count++
+    if (data.lastPregnancy === '') count++
+    if (
+      dayjs().diff(dayjs(
+        data.birthDate.split('/').reverse().join('-')
+      ), 'year') >= 35
+    ) count++
+    if (data.race === 'Preto' || data.race === 'Pardo') count++
+    if (data.abortionHistory) count++
+    // 10 years from last pregnancy year
+    if (data.lastPregnancy !== '' && dayjs().diff(dayjs(
+      data.lastPregnancy.split('/').reverse().join('-')
+    ), 'year') >= 10) count++
+    return count
+  }, [data])
+
   useEffect(() => {
     // HIGH RISK
     if (
@@ -49,11 +79,7 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
     ) {
       setRisk(Risk.HIGH_RISK)
     } else if ( // MODERATE RISK
-      data.hasFamilyPreEclampsia ||
-      data.lastPregnancy === '' ||
-      dayjs().diff(dayjs(data.birthDate), 'year') > 35 ||
-      (data.race === 'Preto' || data.race === 'Pardo') ||
-      data.abortionHistory
+      riskCount >= 2
     ) {
       setRisk(Risk.MODERATE_RISK)
     } else { // LOW RISK
@@ -88,7 +114,14 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
           withDivider />
         <BodyText text={finalText[risk]} />
       </BodyContainer>
-
+      <Button
+        text='Finalizar'
+        onPress={() => { navigation.navigate('Assistance') }}
+      />
+      <ButtonGhost
+        text='Realizar novamente'
+        onPress={() => { navigation.navigate('BasicInfo') }}
+      />
       <Dialog
         open={open}
         setOpen={setOpen}

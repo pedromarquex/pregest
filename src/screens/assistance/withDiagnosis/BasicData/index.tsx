@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 import { Background } from '../../../../components/Background'
 import { Button } from '../../../../components/Button'
-import { Dropdown } from '../../../../components/Dropdown'
 import { Switch } from '../../../../components/Switch'
 import { TextInput } from '../../../../components/TextInput'
 import { DateInput } from '../../../../components/TextInput/date'
@@ -79,12 +78,6 @@ export function WithBasicInfo ({ navigation }: AssistanceStackScreenProps<'Basic
     hasUrineAlteration: false
   })
 
-  // weeks from 1 to 42
-  const gestationalAgeOptions = Array.from({ length: 42 }, (_, i) => i + 1).map((week) => ({
-    label: week.toString(),
-    value: week.toString()
-  }))
-
   const navigateToHistory = (): void => {
     navigation.navigate('WithHistory', {
       data: state
@@ -113,11 +106,13 @@ export function WithBasicInfo ({ navigation }: AssistanceStackScreenProps<'Basic
         value={state.birthDate}
         onChangeText={(text) => { dispatch({ type: 'SET_BIRTH_DATE', payload: text }) }}
       />
-      <Dropdown
+      <TextInput
         label="Idade gestacional"
-        value={gestationalAgeOptions.find((option) => option.value === state.gestationalAge) ?? { label: '', value: '' }}
-        items={gestationalAgeOptions}
+        value={state.gestationalAge}
         onChangeText={(text) => { dispatch({ type: 'SET_GESTATIONAL_AGE', payload: text }) }}
+        keyboardType="numeric"
+        maxLength={2}
+        leftHint='semanas'
       />
       <Switch
         text='Paciente apresenta náuseas e vômitos?'

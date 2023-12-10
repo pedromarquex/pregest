@@ -24,7 +24,7 @@ enum RiskMapper {
 }
 
 export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'Result'>): JSX.Element {
-  const data = route.params?.data as unknown as ResultState
+  const data = route.params.data as unknown as ResultState
   // log data pretified
   // console.log(JSON.stringify(data, null, 2))
 
@@ -52,14 +52,14 @@ export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'R
   useEffect(() => {
     // WITH RISK
     if (
-      Number(data.firstRightArmSystolic) > 160 ||
-      Number(data.firstRightArmDiastolic) > 110 ||
-      Number(data.firstLeftArmSystolic) > 160 ||
-      Number(data.firstLeftArmDiastolic) > 110 ||
-      Number(data.secondRightArmSystolic) > 160 ||
-      Number(data.secondRightArmDiastolic) > 110 ||
-      Number(data.secondLeftArmSystolic) > 160 ||
-      Number(data.secondLeftArmDiastolic) > 110 ||
+      Number(data.firstRightArmSystolic) >= 160 ||
+      Number(data.firstRightArmDiastolic) >= 110 ||
+      Number(data.firstLeftArmSystolic) >= 160 ||
+      Number(data.firstLeftArmDiastolic) >= 110 ||
+      Number(data.secondRightArmSystolic) >= 160 ||
+      Number(data.secondRightArmDiastolic) >= 110 ||
+      Number(data.secondLeftArmSystolic) >= 160 ||
+      Number(data.secondLeftArmDiastolic) >= 110 ||
       data.hasHeadache ||
       data.hasVisualDisturbance ||
       data.hasNausea ||
