@@ -94,30 +94,30 @@ export function FirstMeasurement ({ navigation, route }: AssistanceStackScreenPr
       <BodyText text='Braço direito' style={{ marginBottom: 0 }} />
       <View style={styles.inputsLine}>
         <TextInput
-          label="PAD"
-          value={state.rightArmDiastolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_RIGHT_ARM_DIASTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-        <TextInput
           label="PAS"
           value={state.rightArmSystolic}
           onChangeText={(text) => { dispatch({ type: 'SET_RIGHT_ARM_SYSTOLIC', payload: text }) }}
+          keyboardType='numeric'
+        />
+        <TextInput
+          label="PAD"
+          value={state.rightArmDiastolic}
+          onChangeText={(text) => { dispatch({ type: 'SET_RIGHT_ARM_DIASTOLIC', payload: text }) }}
           keyboardType='numeric'
         />
       </View>
       <BodyText text='Braço esquerdo' style={{ marginBottom: 0 }} />
       <View style={styles.inputsLine}>
         <TextInput
-          label="PAD"
-          value={state.leftArmDiastolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_LEFT_ARM_DIASTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-        <TextInput
           label="PAS"
           value={state.leftArmSystolic}
           onChangeText={(text) => { dispatch({ type: 'SET_LEFT_ARM_SYSTOLIC', payload: text }) }}
+          keyboardType='numeric'
+        />
+        <TextInput
+          label="PAD"
+          value={state.leftArmDiastolic}
+          onChangeText={(text) => { dispatch({ type: 'SET_LEFT_ARM_DIASTOLIC', payload: text }) }}
           keyboardType='numeric'
         />
       </View>
