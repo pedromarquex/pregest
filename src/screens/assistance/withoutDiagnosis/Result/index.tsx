@@ -49,10 +49,10 @@ export function Result ({ navigation, route }: AssistanceStackScreenProps<'Resul
     ) {
       setRisk(Risk.HIGH_RISK)
     } else if ( // MODERATE RISK
-      data.hasFamilyPreEclampsia &&
-      data.lastPregnancy === '' &&
-      dayjs().diff(dayjs(data.birthDate), 'year') > 35 &&
-      (data.race === 'Preto' || data.race === 'Pardo') &&
+      data.hasFamilyPreEclampsia ||
+      data.lastPregnancy === '' ||
+      dayjs().diff(dayjs(data.birthDate), 'year') > 35 ||
+      (data.race === 'Preto' || data.race === 'Pardo') ||
       data.abortionHistory
     ) {
       setRisk(Risk.MODERATE_RISK)
