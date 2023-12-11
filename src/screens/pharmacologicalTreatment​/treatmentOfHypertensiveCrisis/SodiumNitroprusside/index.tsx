@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
+
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
 import { BodyText } from '../../../../components/BodyText'
+import { ButtonGhost } from '../../../../components/ButtonGhost'
+import { Dialog } from '../../../../components/Dialog/dialog'
 import { ReferenceText } from '../../../../components/ReferenceText'
 import { Title } from '../../../../components/Title'
-import { Dialog } from '../../../../components/Dialog/dialog'
-import { ButtonGhost } from '../../../../components/ButtonGhost'
 
 import InfusionTable from '../../../../assets/img/infusion-table.png'
 import { Button } from '../../../../components/Button'
@@ -35,7 +36,7 @@ export function SodiumNitroprusside (): JSX.Element {
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Nifedipino" />
+        <Title text="Nitroprussiato de Sódio" />
         <Title text={titles[0]} />
         <BodyText text={contentText[0]} withDivider />
         <Title text={titles[1]} />
@@ -45,10 +46,11 @@ export function SodiumNitroprusside (): JSX.Element {
         <Title text={titles[3]} />
         <BodyText text={contentText[3]} withDivider />
         <Title text={titles[4]} />
-        <BodyText text={contentText[4]} withDivider />
+        <BodyText text={contentText[4]} />
         <ButtonGhost
-          text="Ver Imagem"
+          text="Ver Esquema de Infusão"
           onPress={() => { setOpen(true) }}
+          style={{ justifyContent: 'flex-start' }}
         />
         <Dialog
           open={open}
@@ -56,9 +58,12 @@ export function SodiumNitroprusside (): JSX.Element {
           >
             <Image
               source={InfusionTable}
-              width={200}
-              height={200}
-              resizeMode="contain"
+              width={300}
+              height={300}
+              style={{
+                height: 300,
+                width: 300
+              }}
             />
             <Button
               text="Fechar"

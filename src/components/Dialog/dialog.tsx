@@ -4,7 +4,8 @@ import {
   Modal,
   Pressable,
   StyleSheet,
-  View
+  View,
+  type ViewStyle
 } from 'react-native'
 import { colors } from '../../@theme/colors'
 
@@ -12,12 +13,14 @@ interface DialogProps {
   open: boolean
   setOpen: (open: boolean) => void
   children: React.ReactNode
+  containerStyle?: ViewStyle
 }
 
 function Dialog ({
   open,
   setOpen,
-  children
+  children,
+  containerStyle
 }: DialogProps): JSX.Element | null {
   if (!open) return null
   return (
@@ -35,7 +38,7 @@ function Dialog ({
                       setOpen(false)
                     }}
                 >
-                    <View style={styles.dialog}>
+                    <View style={[styles.dialog, containerStyle]}>
                         {children}
                     </View>
                 </Pressable>
