@@ -13,9 +13,9 @@ import {
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { PaperProvider, Portal } from 'react-native-paper'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { Tabs } from './src/routes/tabs.routes'
 
 import * as SplashScreen from 'expo-splash-screen'
+import { Routes } from './src/routes'
 
 void SplashScreen.preventAutoHideAsync()
 
@@ -52,7 +52,7 @@ export default function App (): JSX.Element {
           <Portal.Host>
             <NavigationContainer>
               <StatusBar style="dark" />
-              <Tabs />
+              <Routes />
             </NavigationContainer>
           </Portal.Host>
         </GestureHandlerRootView>
