@@ -1,13 +1,14 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Background } from '../../../../components/Background'
-import { Title } from '../../../../components/Title'
 import { BodyContainer } from '../../../../components/BodyContainer'
 import { BodyText } from '../../../../components/BodyText'
 import { ReferenceText } from '../../../../components/ReferenceText'
+import { Title } from '../../../../components/Title'
 
 export function AirwayAndHelp (): JSX.Element {
   const contentText = [
+    'Reconhecer a situação e possibilitar transferência da gestante em transporte adequado, mediante confirmação prévia de vaga em outra unidade;\n\n' +
     'Assegurar a permeabilidade das vias aéreas: posicionar a gestante em decúbito lateral esquerdo e elevado , simultaneamente a outros procedimentos.\n\n' +
     'Aspirar as vias aéreas, lateralizar o rosto durante a convulsão para evitar broncoaspiração e, se necessário, utilizar a cânula de Guedel.\n\n' +
     'Realizar a prevenção de traumas, sem contenção ativa da paciente.'

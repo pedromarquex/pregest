@@ -6,30 +6,27 @@ import { BodyText } from '../../../../components/BodyText'
 import { ReferenceText } from '../../../../components/ReferenceText'
 import { Title } from '../../../../components/Title'
 
-export function HydralazineAmpoule (): JSX.Element {
+export function NifedipineFast (): JSX.Element {
   const contentText = [
-    'Vasodilatador periférico.',
-    'Ampola de 20 mg/mL.',
-    'Dose inicial: 5mg via intravenosa;\n' +
-    'Dose de repetição (se necessário): 5mg de 20/20 minutos podendo chegar a dose máxima de 30mg.',
-    'Taquicardia, flushing (rubor) facial, cefaleia.',
-    'Diluir uma ampola (1 mL) em 19 mL de água destilada, assim, obtendo a concentração de 1 mg/mL.'
+    'Bloqueador dos canais de cálcio.',
+    'Comprimidos de 10 e 20 mg.',
+    '20 a 60 mg/dia- 2 a 3x/dia.',
+    'Cefaleia, rubor facial, tontura, letargia, taquicardia, náuseas, diarreia.'
   ]
 
   const titles = [
     'Classe do Agente:',
     'Apresentação:',
-    'Esquema de administração:',
-    'Principais efeitos adversos:',
-    'Nota:'
+    'Posologia:',
+    'Principais efeitos adversos:'
   ]
 
-  const reference = 'PERAÇOLI et al., 2019; BRASIL, 2022).'
+  const reference = '(BRASIL, 2022; BRASIL, 2023; FEBRASGO, 2017; PERAÇOLI et al., 2019).'
 
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Hidralazina" />
+        <Title text="Nifedipino de liberação rápida" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

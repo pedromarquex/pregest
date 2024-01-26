@@ -33,9 +33,11 @@ export interface RootStackParamList {
   Methyldopa: undefined
   Clonidine: undefined
   NifedipineRetard: undefined
+  NifedipineFast: undefined
   Amlodipine: undefined
   Hydralazine: undefined
   Metoprolol: undefined
+  Pindolol: undefined
   Carvedilol: undefined
 
   TreatmentOfHypertensiveCrisis: undefined

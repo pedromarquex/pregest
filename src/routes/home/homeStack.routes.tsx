@@ -3,6 +3,7 @@ import React from 'react'
 import { Header } from '../../components/Header'
 import { Definition } from '../../screens/Definition'
 import { Home } from '../../screens/Home'
+import { References } from '../../screens/References'
 import { AssistanceAndTransfer } from '../../screens/assistanceAndTransfer/AssistanceAndTransfer'
 import { RecommendationsForTransfer } from '../../screens/assistanceAndTransfer/RecommendationsForTransfer'
 import { AirwayAndHelp } from '../../screens/assistanceAndTransfer/recommendationsForAssistance/AirwayAndHelp'
@@ -44,7 +45,9 @@ import { Clonidine } from '../../screens/pharmacologicalTreatment​/antihyperte
 import { Hydralazine } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Hydralazine'
 import { Methyldopa } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Methyldopa'
 import { Metoprolol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Metoprolol'
+import { NifedipineFast } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/NifedipineFast'
 import { NifedipineRetard } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/NifedipineRetard'
+import { Pindolol } from '../../screens/pharmacologicalTreatment​/antihypertensiveTreatment/Pindolol'
 import { Betamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Betamethasone'
 import { CorticosteroidTherapy } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/CorticosteroidTherapy'
 import { Dexamethasone } from '../../screens/pharmacologicalTreatment​/corticosteroidTherapy/Dexamethasone'
@@ -53,7 +56,6 @@ import { Nifedipine } from '../../screens/pharmacologicalTreatment​/treatmentO
 import { SodiumNitroprusside } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/SodiumNitroprusside'
 import { TreatmentOfHypertensiveCrisis } from '../../screens/pharmacologicalTreatment​/treatmentOfHypertensiveCrisis/TreatmentOfHypertensiveCrisis'
 import { type RootStackParamList } from './homeStack.types'
-import { References } from '../../screens/References'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
@@ -187,6 +189,10 @@ export function HomeStack (): JSX.Element {
           component={NifedipineRetard}
         />
         <Stack.Screen
+          name="NifedipineFast"
+          component={NifedipineFast}
+        />
+        <Stack.Screen
           name="Amlodipine"
           component={Amlodipine}
         />
@@ -197,6 +203,10 @@ export function HomeStack (): JSX.Element {
         <Stack.Screen
           name="Metoprolol"
           component={Metoprolol}
+        />
+        <Stack.Screen
+          name="Pindolol"
+          component={Pindolol}
         />
         <Stack.Screen
           name="Carvedilol"

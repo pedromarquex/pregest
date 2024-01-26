@@ -52,6 +52,25 @@ function Definition (): JSX.Element {
           />
         </>
       )
+    } else if (title === 'insuficiency') {
+      return (
+          <>
+            <Title text='Insuficiência placentária'
+              style={{ textAlign: 'left', width: '100%' }}
+            />
+
+            <BodyTextWithChild>
+              <Text>
+                Restrição de crescimento fetal e/ou alterações dopplervelocimétricas fetais
+              </Text>
+            </BodyTextWithChild>
+            <Button
+              text='Fechar'
+              onPress={() => { closeDialog() }}
+              style={{ width: 300 }}
+            />
+          </>
+      )
     }
     return (
       <></>
@@ -73,12 +92,14 @@ function Definition (): JSX.Element {
       <BodyContainer>
         <BodyTextWithChild >
           <Text>
-            A Pré-eclâmpsia é definida como uma doença multifatorial e multissistêmica, caracterizada
-            pela presença da hipertensão arterial e <Text style={styles.buttonText} onPress={() => { openDialog('proteinury') }}>proteinúria</Text> após
-            a 20º semana de gestação. Além disso,
-            é possível apresentar essa síndrome hipertensiva quando
-            ocorre <Text style={styles.buttonText} onPress={() => { openDialog('disfunction') }}>disfunção de órgãos-alvo</Text>, mesmo
-            na ausência de proteinúria.
+            A Pré-eclâmpsia é definida como uma doença multifatorial e multissistêmica caracterizada pela
+            manifestação de hipertensão arterial, após a 20ª semana de gestação, em gestantes previamente
+            normotensas, associada à
+            <Text style={styles.buttonText} onPress={() => { openDialog('proteinury') }}> proteinúria</Text>
+            {' '}significativa ou <Text style={styles.buttonText} onPress={() => { openDialog('disfunction') }}>disfunção de órgãos-alvo.</Text>
+            {' '}Além disso a associação da hipertensão arterial após a 20ª semana de gestação com sinais de
+            <Text style={styles.buttonText} onPress={() => { openDialog('insuficiency') }}> insuficiência placentária</Text>
+            {' '}deve ser considerada para o diagnóstico, mesmo na ausência de proteinúria
           </Text>
         </BodyTextWithChild>
       </BodyContainer>

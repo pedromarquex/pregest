@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Background } from '../../../../components/Background'
 import { BodyContainer } from '../../../../components/BodyContainer'
 import { BodyText } from '../../../../components/BodyText'
@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function Dopplervelocimetry (): JSX.Element {
   const contentText = [
     'No momento do diagnóstico;\nFeto sem alteração: Quinzenalmente;\nPaciente em conduta conservadora: Semanalmente;\nEm caso de mudanças abruptas nas condições maternas-fetais: Imediatamente.',
-    'Doppler da artéria umbilical com fluxo dialóstico ausente ou reverso, Doppler umbilical alterado, principalmente se presente também Doppler alterado nas duas artérias uterinas maternas, Doppler venoso com onda A patológica indicam resolução imediata da gestação.'
+    'Indicam resolução imediata da gestação:\nDoppler da artéria umbilical com fluxo dialóstico ausente ou reverso;\nDoppler umbilical alterado, em especial, se alteração de Doppler nas duas artérias uterinas maternas;\nDoppler venoso com onda A patológica.'
   ]
 
   const titles = [

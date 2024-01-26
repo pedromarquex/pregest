@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function Metoprolol (): JSX.Element {
   const contentText = [
-    'β-bloqueadores.',
+    'β-bloqueador.',
     'Comprimidos de 25, 50 e 100 mg.',
     '100 a 200 mg/dia 1 a 2 x/dia.',
     'Bradicardia, alterações posturais (muito raramente com síncope), mãos e pés frios, fenômeno de Raynaud e palpitações.',

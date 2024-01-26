@@ -9,8 +9,8 @@ import { Title } from '../../../../components/Title'
 export function Proteinury (): JSX.Element {
   const contentText = [
     'Exame utilizado como critério para diagnostico da pré-eclâmpsia.',
-    '< 300mg em urina de 24 horas;\nrelação proteína/creatinina < 0,3 mg/dL;\n< 1g em fita reagente.',
-    'Utilizar para fins clínicos o método de relação proteinúria/creatinúria (mg/dL) em amostra isolada de urina.'
+    '< 300mg em urina de 24 horas;\nrelação proteína/creatinina < 0,3 mg/dL;\n< 1g em fita reagente em amostra de urina isolada.',
+    'Entre os critérios utilizados para a identificação de proteinúria significativa, o método de relação proteína/creatinina urinárias (ambas em mg/dL) é o mais fidedigno, de fácil execução e de menor custo;\nA repetição da proteinúria não se faz necessária'
   ]
 
   const titles = [

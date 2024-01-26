@@ -9,22 +9,27 @@ export function AntihypertensiveTreatment (): JSX.Element {
 
   const menuItems = [
     {
-      title: 'Metildopa​',
+      title: 'Metildopa',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('Methyldopa') }
     },
     {
-      title: 'Clonidina​',
+      title: 'Clonidina',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('Clonidine') }
     },
     {
-      title: 'Nifedipino Retard​',
+      title: 'Nifedipino Retard',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('NifedipineRetard') }
     },
     {
-      title: 'Anlodipino​',
+      title: 'Nifedipino de liberação rápida',
+      icon: 'pill' as 'pill',
+      onPress: () => { navigation.navigate('NifedipineFast') }
+    },
+    {
+      title: 'Anlodipino',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('Amlodipine') }
     },
@@ -37,6 +42,11 @@ export function AntihypertensiveTreatment (): JSX.Element {
       title: 'Metoprolol',
       icon: 'pill' as 'pill',
       onPress: () => { navigation.navigate('Metoprolol') }
+    },
+    {
+      title: 'Pindolol',
+      icon: 'pill' as 'pill',
+      onPress: () => { navigation.navigate('Pindolol') }
     },
     {
       title: 'Carvedilol',

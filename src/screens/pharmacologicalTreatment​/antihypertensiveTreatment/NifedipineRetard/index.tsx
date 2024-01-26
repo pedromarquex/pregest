@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function NifedipineRetard (): JSX.Element {
   const contentText = [
-    'Bloqueadores dos canais de cálcio.',
+    'Bloqueador dos canais de cálcio.',
     'Comprimidos de 10 e 20 mg.',
     '20 a 120 mg/dia 1 a 3x/dia.',
     'Cefaleia, rubor facial, tontura, letargia, taquicardia, náuseas, diarreia.'

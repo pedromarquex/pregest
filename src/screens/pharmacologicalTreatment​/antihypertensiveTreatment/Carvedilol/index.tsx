@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function Carvedilol (): JSX.Element {
   const contentText = [
-    'β-bloqueadores.',
+    'β-bloqueador.',
     'Comprimidos de 6,25 e 12,5 mg.',
     '12,5 a 50 mg/dia 1 a 2 x/dia.',
     'Tontura, cefaleia, cansaço, náuseas e bradicardia.',

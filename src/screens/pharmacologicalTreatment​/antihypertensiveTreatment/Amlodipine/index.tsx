@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function Amlodipine (): JSX.Element {
   const contentText = [
-    'Bloqueadores dos canais de cálcio.',
+    'Bloqueador dos canais de cálcio.',
     'Comprimidos de 2,5, 5 e 10 mg.',
     '5 a 20 mg/dia 1 a 2x/dia.',
     'Cefaleia, edema, fadiga, sonolência, náuseas, dor abdominal, rubor, palpitações e tontura.'
