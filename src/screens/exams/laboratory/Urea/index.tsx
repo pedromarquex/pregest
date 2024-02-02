@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function Urea (): JSX.Element {
   const contentText = [
     'Estratifica a gravidade da doença. Deve ser solicitado quando houver nítido comprometimento renal ou suspeita de síndrome hemolítico-urêmica.',
-    '15- 36 mg/ dL.',
+    '15-43mg/dL',
     'A dosagem de ureia não deve ser efetuada de rotina, exceto quando se suspeita de falência renal e síndrome hemolítico-urêmica.\nInterromper gestação se houver insuficiência renal evidenciada principalmente por elevação progressiva dos níveis de ureia e creatinina, oligúria e anasarca.'
   ]
 

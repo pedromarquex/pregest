@@ -23,7 +23,7 @@ function Definition (): JSX.Element {
 
           <BodyTextWithChild>
             <Text>
-              ≥ a 300 mg em urina de 24 horas ou relação proteína/creatinina {'>'} 0,3 mg/dL ou 1+ em fita reativa.
+              ≥ a 300 mg em urina de 24 horas ou relação proteína/creatinina ≥ 0,3 mg/dL ou 1+ em fita reativa.
             </Text>
           </BodyTextWithChild>
           <Button

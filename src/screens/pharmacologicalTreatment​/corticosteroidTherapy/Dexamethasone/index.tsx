@@ -8,14 +8,12 @@ import { Title } from '../../../../components/Title'
 
 export function Dexamethasone (): JSX.Element {
   const contentText = [
-    '4mg/mL. Ampola de 2ml.',
     'Intramuscular.',
     '6 mg a cada 12 horas por 48 horas (total de quatro doses).',
-    'Fazer entre 24 e 34 semanas, em casos de interrupção pré-termo da gestação.\nDeve ser utilizada apenas quando não há disponibilidade da betametasona.'
+    'Fazer entre 24 e 34 semanas, em casos de interrupção pré-termo da gestação.\nDeve ser utilizada quando não houver disponibilidade da betametasona.'
   ]
 
   const titles = [
-    'Apresentação:',
     'Via de Administração:',
     'Esquema de Administração:',
     'Nota:'

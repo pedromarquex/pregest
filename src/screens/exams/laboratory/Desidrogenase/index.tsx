@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function Desidrogenase (): JSX.Element {
   const contentText = [
     'Elevação dos níveis de desidrogenase lática (DHL) igual ou maior que o dobro do valor de referência indica agravamento da doença (presença de hemólise).',
-    '200- 480 U/L.',
+    '230-460 U/L',
     'Interromper gestação se desidrogenase lática (DHL) ≥600U/L;\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
   ]
 
@@ -24,7 +24,7 @@ export function Desidrogenase (): JSX.Element {
   return (
     <Background style={styles.container}>
       <BodyContainer>
-        <Title text="Desidrogenase Lactica (DHL)" />
+        <Title text="Desidrogenase Lática (DHL)" />
         {contentText.map((text, index) => (
           <View key={index}>
             <Title text={titles[index]} />

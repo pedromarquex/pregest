@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function Clonidine (): JSX.Element {
   const contentText = [
-    'Simpatolíticos de ação central, α2-agonistas.',
+    'Simpatolítico de ação central, α2-agonistas.',
     'Comprimidos de 0,1 e 0,2 mg.',
     '0,2 a 0,6 mg/dia 2 a 3x/dia.',
     'Tontura ,sedação, hipotensão ortostática, boca seca, depressão, distúrbio do sono, cefaleia, constipação, náusea, vômito, fadiga.'

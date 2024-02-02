@@ -8,7 +8,6 @@ import { Title } from '../../../../components/Title'
 
 export function Betamethasone (): JSX.Element {
   const contentText = [
-    'Acetato + Betametasona + Fostato Dissódico, Suspensão injetável (3 mg/mL + 3 mg/mL). Ampola de 1 ml.',
     'Intramuscular.',
     '12 mg a cada 24 horas por 48 horas (total de duas doses).',
     'Droga de primeira escolha;\n\n' +
@@ -16,7 +15,6 @@ export function Betamethasone (): JSX.Element {
   ]
 
   const titles = [
-    'Apresentação:',
     'Via de Administração:',
     'Esquema de Administração:',
     'Nota:'

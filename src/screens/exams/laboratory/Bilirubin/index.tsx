@@ -8,9 +8,9 @@ import { Title } from '../../../../components/Title'
 
 export function Bilirubin (): JSX.Element {
   const contentText = [
-    'Níveis de bilirrubina indireta ≥ a 1,2 mg/dL indica agravamento da doença (anemia microangiopática e a presença de hemólise).',
-    'Bilirrubina direta: Até 0,3mg/dL;\nBilirrubina indireta: Até 0,8mg/dL;\nBilirrubina total: Até 1,2mg/dL.',
-    'Interromper gestação se bilirrubinas indiretas acima de 1,2 mg/dL;\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
+    'Níveis de bilirrubina indireta ≥ a 1,20 mg/dL indica agravamento da doença (anemia microangiopática e a presença de hemólise).',
+    'Bilirrubina direta: Até 0,20mg/dL;\nBilirrubina indireta: Até 0,80mg/dL;\nBilirrubina total: Até 1,20mg/dL.',
+    'Interromper gestação se bilirrubinas indiretas acima de 1,20 mg/dL;\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
   ]
 
   const titles = [

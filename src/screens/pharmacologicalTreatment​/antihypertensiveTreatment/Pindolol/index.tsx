@@ -9,10 +9,10 @@ import { Title } from '../../../../components/Title'
 export function Pindolol (): JSX.Element {
   const contentText = [
     'β-bloqueador.',
-    'Comprimidos de 25, 50 e 100 mg.',
-    '100 a 200 mg/dia 1 a 2 x/dia.',
-    'Bradicardia, alterações posturais (muito raramente com síncope), mãos e pés frios, fenômeno de Raynaud e palpitações.',
-    'Para controle pressórico ou no caso de impossibilidade de uso das drogas de primeira escolha prescrever como terceira droga na associação medicamentosa.'
+    'Comprimidos de 5 mg e 10 mg',
+    '10 mg a 30 mg/dia 2 a 3 vezes/dia',
+    'fadiga, tontura, náuseas, câimbras musculares, tremores, cefaleia, distúrbios do sono, reações cutâneas, depressão e alucinações',
+    'Os β-bloqueadores de maior experiência clínica; para controle pressórico ou no caso de impossibilidade de uso das drogas de primeira escolha prescrever como terceira droga na associação medicamentosa.\nDroga de difícil acesso.'
   ]
 
   const titles = [

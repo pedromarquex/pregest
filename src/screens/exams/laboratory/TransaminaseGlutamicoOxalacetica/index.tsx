@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function TransaminaseGlutamicoOxalacetica (): JSX.Element {
   const contentText = [
     'O valor igual ou maior que o dobro do valor de referência indica o comprometimento hepático (sugestiva da síndrome de HELLP).',
-    '10- 31 U/L.',
+    '15-30U/L',
     'Solicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.\nTGO/AST >2x acima do limite de normalidade com dor epigástrica ou em hipocôndrio direito é um critério para antecipação terapêutica do parto.'
   ]
 

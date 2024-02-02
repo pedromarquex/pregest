@@ -16,6 +16,7 @@ export function SodiumNitroprusside (): JSX.Element {
   const contentText = [
     'Vasodilatador Arterial e Venoso.',
     'Ampola 50 mg/2 mL.',
+    'Dose de 0,5 a 10mcg/kg/min por infusão intravenosa contínua',
     'Bradiarritmias, taquiarritmias, cefaleia, tontura, sonolência, rubor facial e hipotensão.',
     'Diluir uma ampola (2mL) em 248mL de soro glicosado 5%, resultando na concentração de 200mcg/mL.',
     'Iniciar com a dose mínima e aumentar 1mL/h a cada 10 minutos;\nA dose máxima, quando necessária, não deve ser utilizada por mais do que 10 minutos, devendo-se reduzi-la, então, pela metade;\nA droga deixa de agir 3 minutos após a interrupção da infusão.'
@@ -24,6 +25,7 @@ export function SodiumNitroprusside (): JSX.Element {
   const titles = [
     'Classe do Agente:',
     'Apresentação:',
+    'Esquema de administração:',
     'Principais efeitos adversos:',
     'Nota:',
     'Esquema de infusão recomendado:'

@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function Dopplervelocimetry (): JSX.Element {
   const contentText = [
     'No momento do diagnóstico;\nFeto sem alteração: Quinzenalmente;\nPaciente em conduta conservadora: Semanalmente;\nEm caso de mudanças abruptas nas condições maternas-fetais: Imediatamente.',
-    'Indicam resolução imediata da gestação:\nDoppler da artéria umbilical com fluxo dialóstico ausente ou reverso;\nDoppler umbilical alterado, em especial, se alteração de Doppler nas duas artérias uterinas maternas;\nDoppler venoso com onda A patológica.'
+    'Indicam resolução imediata da gestação:\nDoppler da artéria umbilical com fluxo diastólico ausente ou reverso;\nDoppler umbilical alterado, em especial, se alteração de Doppler nas duas artérias uterinas maternas;\nDoppler venoso com onda A patológica.'
   ]
 
   const titles = [

@@ -11,8 +11,8 @@ export function Zuspan (): JSX.Element {
     'Exclusivamente intravenoso.',
     '4g por via intravenosa (bolus), administrados lentamente.',
     'Diluir 8 mL de MgSO4 50% (4g) em 12 mL de soro fisiológico 0,9% ou água destilada, resultando na concentração final de 4g/20 mL. Administrar a solução lentamente, entre 15 a 20 minutos por via intravenosa;' +
-    '\n\nOutra alternativa: Diluir 8 mL MgSO4 50% (4g) em 100 de soro fisiológico 0,9% a 300 mL/h em bomba de infusão contínua, resultando na infusão do volume total em aproximadamente 20 minutos.',
-    '1g por via intravenosa por hora em bomba de infusão contínua (BIC).',
+    '\n\nOutra alternativa: Diluir 8 mL MgSO4 50% (4g) em 100mL de soro fisiológico 0,9% a 300 mL/h em bomba de infusão contínua, resultando na infusão do volume total em aproximadamente 20 minutos.',
+    '1g via intravenosa por hora em bomba de infusão contínua (BIC).',
     'Diluir uma ampola (10mL) de MgSO4 50% em 490 mL de soro fisiológico a 0,9%, obtendo a concentração final de 1g/100 mL. A solução deve ser infundida por via intravenosa na velocidade de 100 mL/h (1g/h); \n\n' +
     'Em caso de pacientes sintomáticas após o início da dose de manutenção, pode-se aumentar a infusão para 2g/hora. Dessa forma, dilui-se 20 mL de MgSO4 50% (2 ampolas) em 480 mL de soro fisiológico a 0,9% com a infusão de 100 mL/h.',
     '- Pressão arterial sistólica ≥ 160 mmHg e/ou PA diastólica ≥ 110 mmHg, mesmo na ausência de sintomas, indica a profilaxia de convulsão;\n\n' +

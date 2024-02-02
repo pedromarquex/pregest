@@ -9,10 +9,10 @@ import { Title } from '../../../../components/Title'
 export function Pritchard (): JSX.Element {
   const contentText = [
     'Intravenoso e Intramuscular.',
-    '4g por via intravenosa (bolus), administrados lentamentea + 10g intramuscular (5g em cada nádega).',
+    '4g por via intravenosa (bolus), administrados lentamente + 10g intramuscular (5g em cada nádega).',
     '5g por via intramuscular profunda a cada 4 horas.',
     'Diluir 8 mL de MgSO4 50% (4g) em 12 mL de soro fisiológico 0,9% ou água destilada, resultando na concentração final de 4g/20 mL. Administrar a solução lentamente, entre 15 a 20 minutos por via intravenosa;' +
-    '\n\n' + 'Outra alternativa: Diluir 8 mL MgSO4 50% (4g) em 100 de soro fisiológico 0,9% em bomba de infusão contínua a 300mL/h, resultando na infusão do volume total em aproximadamente 20 minutos;',
+    '\n\n' + 'Outra alternativa: Diluir 8 mL MgSO4 50% (4g) em 100mL de soro fisiológico 0,9% em bomba de infusão contínua a 300mL/h, resultando na infusão do volume total em aproximadamente 20 minutos;',
     'Administrar 5g de MgSO4 50% por via intramuscular profunda.',
     '- Pressão arterial sistólica ≥ 160 mmHg e/ou PA diastólica ≥ 110 mmHg, mesmo na ausência de sintomas, indica a profilaxia de convulsão;\n\n' +
     '- Em pacientes com insuficiência renal (creatinina ≥ 1,2 mg/dL), a dose de manutenção deve ser a metade da dose recomendada. Deve-se interromper a infusão do sulfato de magnésio apenas se a diurese for inferior a 25 mL;\n\n' +
@@ -22,7 +22,7 @@ export function Pritchard (): JSX.Element {
 
   const titles = [
     'Via de Administração:',
-    'Dose de Ataque:',
+    'Dose de Inicial:',
     'Dose de Manutenção:',
     'Preparação da dose inicial intravenosa:',
     'Preparação da dose de manutenção:',

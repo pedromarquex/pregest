@@ -9,7 +9,7 @@ import { Title } from '../../../../components/Title'
 export function Creatinine (): JSX.Element {
   const contentText = [
     'Níveis anormais ou em elevação da creatinina, especialmente com oligúria, sugerem pré-eclâmpsia grave.',
-    '≤1,2 mg/dL.',
+    '0,60-1,2mg/dL',
     'Interromper gestação se creatinina > 1,2mg/dl sem doença renal prévia ou o se houver insuficiência renal evidenciada principalmente por elevação progressiva dos níveis de ureia e creatinina, oligúria e anasarca;\nSolicitar pelo menos uma vez por semana, a cada consulta, ou a cada 72h para pré-eclâmpsia com sinais de gravidade.'
   ]
 

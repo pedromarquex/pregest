@@ -19,7 +19,7 @@ export function Laboratory (): JSX.Element {
       onPress: () => { navigation.navigate('Creatinine') }
     },
     {
-      title: 'Desidrogenase Lactica (DHL)',
+      title: 'Desidrogenase Lática (DHL)',
       icon: 'microscope' as 'microscope',
       onPress: () => { navigation.navigate('Desidrogenase') }
     },

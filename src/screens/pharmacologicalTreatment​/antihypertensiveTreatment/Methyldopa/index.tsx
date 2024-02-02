@@ -8,7 +8,7 @@ import { Title } from '../../../../components/Title'
 
 export function Methyldopa (): JSX.Element {
   const contentText = [
-    'Simpatolíticos de ação central, α2-agonistas.',
+    'Simpatolítico de ação central, α2-agonistas.',
     'Comprimidos de 250 e 500 mg.',
     '750 a 2.000 mg/dia 2 a 4x/dia.',
     'Sedação (geralmente transitória), cefaleia, vertigem, hipotensão ortostática, edema, aumento de peso, náuseas, vômitos, diarreia.'

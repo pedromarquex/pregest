@@ -8,11 +8,11 @@ import { Title } from '../../../../components/Title'
 
 export function Hydralazine (): JSX.Element {
   const contentText = [
-    'β-bloqueadores.',
-    'Comprimidos de 25, 50 e 100 mg.',
-    '100 a 200 mg/dia 1 a 2 x/dia.',
-    'Bradicardia, alterações posturais (muito raramente com síncope), mãos e pés frios, fenômeno de Raynaud e palpitações.',
-    'Para controle pressórico ou no caso de impossibilidade de uso das drogas de primeira escolha prescrever como terceira droga na associação medicamentosa.'
+    'Vasodilatador periférico',
+    'Drágeas de 25 e 50 mg',
+    '50 mg a 150mg/dia- 2 a 3 x/dia ',
+    'Taquicardia, flushing (rubor) facial, cefaleia',
+    'Para controle pressórico ou no caso de impossibilidade de uso das drogas de primeira escolha prescrever como terceira droga na associação medicamentosa;\nA pressão arterial deve ser monitorada rigorosamente quando administrada'
   ]
 
   const titles = [
