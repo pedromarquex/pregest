@@ -10,8 +10,6 @@ export interface HistoryState {
   hasHypertension: boolean
   hasDiabetes: boolean
   hasAutoimmuneDisease: boolean
-  hasFamilyPreEclampsia: boolean
-  hasAnteriorPreEclampsia: boolean
 }
 
 interface HistoryAction {
@@ -19,8 +17,6 @@ interface HistoryAction {
   | 'SET_HYPERTENSION'
   | 'SET_DIABETES'
   | 'SET_AUTOIMMUNE_DISEASE'
-  | 'SET_FAMILY_PRE_ECLAMPSIA'
-  | 'SET_ANTERIOR_PRE_ECLAMPSIA'
   payload: any
 }
 
@@ -29,14 +25,10 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
     switch (action.type) {
       case 'SET_ABORTION_HISTORY':
         return { ...state, abortionHistory: action.payload }
-      case 'SET_ANTERIOR_PRE_ECLAMPSIA':
-        return { ...state, hasAnteriorPreEclampsia: action.payload }
       case 'SET_AUTOIMMUNE_DISEASE':
         return { ...state, hasAutoimmuneDisease: action.payload }
       case 'SET_DIABETES':
         return { ...state, hasDiabetes: action.payload }
-      case 'SET_FAMILY_PRE_ECLAMPSIA':
-        return { ...state, hasFamilyPreEclampsia: action.payload }
       case 'SET_HYPERTENSION':
         return { ...state, hasHypertension: action.payload }
       default:
@@ -46,9 +38,7 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
     abortionHistory: false,
     hasHypertension: false,
     hasDiabetes: false,
-    hasAutoimmuneDisease: false,
-    hasFamilyPreEclampsia: false,
-    hasAnteriorPreEclampsia: false
+    hasAutoimmuneDisease: false
   })
 
   const navigateToMeasurement = (): void => {
@@ -91,16 +81,6 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
         value={state.hasAutoimmuneDisease}
         onToggle={() => { dispatch({ type: 'SET_AUTOIMMUNE_DISEASE', payload: !(state.hasAutoimmuneDisease as boolean) }) }}
         text="Portadora de doença autoimune?"
-      />
-      <Switch
-        value={state.hasFamilyPreEclampsia}
-        onToggle={() => { dispatch({ type: 'SET_FAMILY_PRE_ECLAMPSIA', payload: !(state.hasFamilyPreEclampsia as boolean) }) }}
-        text="Histórico familiar de pré-eclâmpsia?"
-      />
-      <Switch
-        value={state.hasAnteriorPreEclampsia}
-        onToggle={() => { dispatch({ type: 'SET_ANTERIOR_PRE_ECLAMPSIA', payload: !(state.hasAnteriorPreEclampsia as boolean) }) }}
-        text="Pré-eclâmpsia em gestação anterior?"
       />
     </Background>
   )

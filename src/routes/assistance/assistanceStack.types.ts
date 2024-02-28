@@ -9,7 +9,6 @@ export interface AssistanceStackParamList {
   BasicInfo: undefined
   History: DataType
   FirstMeasurement: DataType
-  SecondMeasurement: DataType
   Result: DataType
 
   WithBasicInfo: undefined

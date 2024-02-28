@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { Background } from '../../../../components/Background'
-import { BodyText } from '../../../../components/BodyText'
 import { Button } from '../../../../components/Button'
+import { Switch } from '../../../../components/Switch'
 import { TextInput } from '../../../../components/TextInput'
 import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
@@ -10,19 +10,15 @@ import { type AssistanceStackScreenProps } from '../../../../routes/assistance/a
 export interface MeasurementsInfoState {
   weight: string
   height: string
-  rightArmDiastolic: string
-  rightArmSystolic: string
-  leftArmDiastolic: string
-  leftArmSystolic: string
+  hasFamilyPreEclampsia: boolean
+  hasAnteriorPreEclampsia: boolean
 }
 
 interface MeasurementsAction {
   type: 'SET_WEIGHT'
   | 'SET_HEIGHT'
-  | 'SET_RIGHT_ARM_DIASTOLIC'
-  | 'SET_RIGHT_ARM_SYSTOLIC'
-  | 'SET_LEFT_ARM_DIASTOLIC'
-  | 'SET_LEFT_ARM_SYSTOLIC'
+  | 'SET_FAMILY_PRE_ECLAMPSIA'
+  | 'SET_ANTERIOR_PRE_ECLAMPSIA'
   payload: any
 }
 
@@ -33,28 +29,22 @@ export function FirstMeasurement ({ navigation, route }: AssistanceStackScreenPr
         return { ...state, height: action.payload }
       case 'SET_WEIGHT':
         return { ...state, weight: action.payload }
-      case 'SET_RIGHT_ARM_DIASTOLIC':
-        return { ...state, rightArmDiastolic: action.payload }
-      case 'SET_RIGHT_ARM_SYSTOLIC':
-        return { ...state, rightArmSystolic: action.payload }
-      case 'SET_LEFT_ARM_DIASTOLIC':
-        return { ...state, leftArmDiastolic: action.payload }
-      case 'SET_LEFT_ARM_SYSTOLIC':
-        return { ...state, leftArmSystolic: action.payload }
+      case 'SET_ANTERIOR_PRE_ECLAMPSIA':
+        return { ...state, hasAnteriorPreEclampsia: action.payload }
+      case 'SET_FAMILY_PRE_ECLAMPSIA':
+        return { ...state, hasFamilyPreEclampsia: action.payload }
       default:
         return state
     }
   }, {
     weight: '',
     height: '',
-    rightArmDiastolic: '',
-    rightArmSystolic: '',
-    leftArmDiastolic: '',
-    leftArmSystolic: ''
+    hasFamilyPreEclampsia: false,
+    hasAnteriorPreEclampsia: false
   })
 
   const navigateToSecond = (): void => {
-    navigation.navigate('SecondMeasurement', {
+    navigation.navigate('Result', {
       data: {
         ...route.params?.data,
         ...state
@@ -67,13 +57,14 @@ export function FirstMeasurement ({ navigation, route }: AssistanceStackScreenPr
       contentContainerStyle={{ paddingTop: 36, paddingBottom: 150 }}
       bottom={
         <Button
-          text='Continuar →'
+          text='Ver resultados'
           onPress={navigateToSecond}
           style={{ marginHorizontal: 20 }}
         />
       }
     >
-      <Title text='Primeiras Aferições' style={{ paddingTop: 0 }} />
+      <Title text='Histórico' style={{ paddingTop: 0 }} />
+
       <View style={styles.inputsLine}>
         <TextInput
           label="Peso"
@@ -90,37 +81,16 @@ export function FirstMeasurement ({ navigation, route }: AssistanceStackScreenPr
           leftHint='cm'
         />
       </View>
-      <BodyText text='Primeira aferição de pressão arterial' />
-      <BodyText text='Braço direito' style={{ marginBottom: 0 }} />
-      <View style={styles.inputsLine}>
-        <TextInput
-          label="PAS"
-          value={state.rightArmSystolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_RIGHT_ARM_SYSTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-        <TextInput
-          label="PAD"
-          value={state.rightArmDiastolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_RIGHT_ARM_DIASTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-      </View>
-      <BodyText text='Braço esquerdo' style={{ marginBottom: 0 }} />
-      <View style={styles.inputsLine}>
-        <TextInput
-          label="PAS"
-          value={state.leftArmSystolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_LEFT_ARM_SYSTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-        <TextInput
-          label="PAD"
-          value={state.leftArmDiastolic}
-          onChangeText={(text) => { dispatch({ type: 'SET_LEFT_ARM_DIASTOLIC', payload: text }) }}
-          keyboardType='numeric'
-        />
-      </View>
+      <Switch
+        value={state.hasFamilyPreEclampsia}
+        onToggle={() => { dispatch({ type: 'SET_FAMILY_PRE_ECLAMPSIA', payload: !(state.hasFamilyPreEclampsia as boolean) }) }}
+        text="Histórico familiar de pré-eclâmpsia?"
+      />
+      <Switch
+        value={state.hasAnteriorPreEclampsia}
+        onToggle={() => { dispatch({ type: 'SET_ANTERIOR_PRE_ECLAMPSIA', payload: !(state.hasAnteriorPreEclampsia as boolean) }) }}
+        text="Pré-eclâmpsia em gestação anterior?"
+      />
     </Background>
   )
 }

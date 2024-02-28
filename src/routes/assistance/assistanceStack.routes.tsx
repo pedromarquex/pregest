@@ -10,7 +10,6 @@ import { BasicInfo } from '../../screens/assistance/withoutDiagnosis/BasicData'
 import { FirstMeasurement } from '../../screens/assistance/withoutDiagnosis/FirstMeasurement'
 import { History } from '../../screens/assistance/withoutDiagnosis/History'
 import { Result } from '../../screens/assistance/withoutDiagnosis/Result'
-import { SecondMeasurement } from '../../screens/assistance/withoutDiagnosis/SecondMeasurement'
 import { type AssistanceStackParamList } from './assistanceStack.types'
 
 const Stack = createStackNavigator<AssistanceStackParamList>()
@@ -39,10 +38,6 @@ export function AssistanceStack (): JSX.Element {
         <Stack.Screen
           name="FirstMeasurement"
           component={FirstMeasurement}
-        />
-        <Stack.Screen
-          name="SecondMeasurement"
-          component={SecondMeasurement}
         />
         <Stack.Screen
           name="Result"
