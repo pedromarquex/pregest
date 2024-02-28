@@ -11,11 +11,11 @@ export interface HistoryState {
   alteredFetalHeartBeat: boolean
 
   hasLaboratorialExams: boolean
-  hasLaboratorialAlterations: string
+  hasLaboratorialAlterations: boolean
   whichLaboratorialAlterations: string
 
   hasUltrasound: boolean
-  hasUltrasoundAlterations: string
+  hasUltrasoundAlterations: boolean
   whichUltrasoundAlterations: string
 
   hasCardiotocography: boolean
@@ -39,6 +39,8 @@ interface HistoryAction {
 
 export function WithHistory ({ navigation, route }: AssistanceStackScreenProps<'BasicInfo'>): JSX.Element {
   const [state, dispatch] = useReducer((state: HistoryState, action: HistoryAction) => {
+    console.log('Before state:', state)
+    console.log('Before action:', action)
     switch (action.type) {
       case 'SET_ALTERED_FETAL_MOVEMENTS':
         return { ...state, alteredFetalMovements: action.payload }
@@ -59,7 +61,7 @@ export function WithHistory ({ navigation, route }: AssistanceStackScreenProps<'
       case 'SET_HAS_CARDIOTOCOGRAPHY':
         return { ...state, hasCardiotocography: action.payload }
       case 'SET_HAS_CARDIOTOCOGRAPHY_ALTERATIONS':
-        return { ...state, whichCardiotocographyAlterations: action.payload }
+        return { ...state, hasCardiotocographyAlterations: action.payload }
       default:
         return state
     }
@@ -68,11 +70,11 @@ export function WithHistory ({ navigation, route }: AssistanceStackScreenProps<'
     alteredFetalHeartBeat: false,
 
     hasLaboratorialExams: false,
-    hasLaboratorialAlterations: '',
+    hasLaboratorialAlterations: false,
     whichLaboratorialAlterations: '',
 
     hasUltrasound: false,
-    hasUltrasoundAlterations: '',
+    hasUltrasoundAlterations: false,
     whichUltrasoundAlterations: '',
 
     hasCardiotocography: false,
@@ -157,10 +159,11 @@ export function WithHistory ({ navigation, route }: AssistanceStackScreenProps<'
       />
       {(Boolean(state.hasCardiotocography)) && (
           <Switch
-            text='Apresentou alterações na cardiotocografia?'
-            value={state.hasCardiotocographyAlterations}
-            onToggle={() => { dispatch({ type: 'SET_HAS_CARDIOTOCOGRAPHY_ALTERATIONS', payload: !(state.hasCardiotocographyAlterations as boolean) }) }}
+          text='Apresentou alterações na cardiotocografia?'
+          value={state.hasCardiotocographyAlterations}
+          onToggle={() => { dispatch({ type: 'SET_HAS_CARDIOTOCOGRAPHY_ALTERATIONS', payload: !(state.hasCardiotocographyAlterations as boolean) }) }}
         />
+
       )}
 
     </Background>

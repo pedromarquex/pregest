@@ -46,6 +46,7 @@ export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'R
     - Alteração visual
     - Nauseas e vomitos
     - Dor abdominal
+    - qualquer outra alteração
 
   */
 
@@ -63,7 +64,17 @@ export function WithResult ({ navigation, route }: AssistanceStackScreenProps<'R
       data.hasHeadache ||
       data.hasVisualDisturbance ||
       data.hasNausea ||
-      data.hasAbdominalPain
+      data.hasAbdominalPain ||
+      data.hasNausea ||
+      data.hasGainedWeight ||
+      data.hasToracicPain ||
+      data.hasFaceAndHandEdema ||
+      data.hasUrineAlteration ||
+      data.alteredFetalMovements ||
+      data.alteredFetalHeartBeat ||
+      data.hasLaboratorialAlterations ||
+      data.hasUltrasoundAlterations ||
+      data.hasCardiotocographyAlterations
     ) {
       setRisk(Risk.WITH_RISK)
     } else {
