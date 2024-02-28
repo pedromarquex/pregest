@@ -6,6 +6,7 @@ import { Title } from '../../../../components/Title'
 import { type AssistanceStackScreenProps } from '../../../../routes/assistance/assistanceStack.types'
 
 export interface HistoryState {
+  abortionHistory: boolean
   hasHypertension: boolean
   hasDiabetes: boolean
   hasAutoimmuneDisease: boolean
@@ -14,7 +15,8 @@ export interface HistoryState {
 }
 
 interface HistoryAction {
-  type: 'SET_HYPERTENSION'
+  type: 'SET_ABORTION_HISTORY'
+  | 'SET_HYPERTENSION'
   | 'SET_DIABETES'
   | 'SET_AUTOIMMUNE_DISEASE'
   | 'SET_FAMILY_PRE_ECLAMPSIA'
@@ -25,6 +27,8 @@ interface HistoryAction {
 export function History ({ navigation, route }: AssistanceStackScreenProps<'BasicInfo'>): JSX.Element {
   const [state, dispatch] = useReducer((state: HistoryState, action: HistoryAction) => {
     switch (action.type) {
+      case 'SET_ABORTION_HISTORY':
+        return { ...state, abortionHistory: action.payload }
       case 'SET_ANTERIOR_PRE_ECLAMPSIA':
         return { ...state, hasAnteriorPreEclampsia: action.payload }
       case 'SET_AUTOIMMUNE_DISEASE':
@@ -39,6 +43,7 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
         return state
     }
   }, {
+    abortionHistory: false,
     hasHypertension: false,
     hasDiabetes: false,
     hasAutoimmuneDisease: false,
@@ -67,6 +72,11 @@ export function History ({ navigation, route }: AssistanceStackScreenProps<'Basi
       }
     >
       <Title text='Histórico' style={{ paddingTop: 0 }} />
+      <Switch
+        value={state.abortionHistory}
+        onToggle={() => { dispatch({ type: 'SET_ABORTION_HISTORY', payload: !(state.abortionHistory as boolean) }) }}
+        text="História de abortamento?"
+      />
       <Switch
         value={state.hasHypertension}
         onToggle={() => { dispatch({ type: 'SET_HYPERTENSION', payload: !(state.hasHypertension as boolean) }) }}

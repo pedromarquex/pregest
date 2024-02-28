@@ -2,7 +2,6 @@ import React, { useReducer } from 'react'
 import { Background } from '../../../../components/Background'
 import { Button } from '../../../../components/Button'
 import { Dropdown } from '../../../../components/Dropdown'
-import { Switch } from '../../../../components/Switch'
 import { TextInput } from '../../../../components/TextInput'
 import { DateInput } from '../../../../components/TextInput/date'
 import { Title } from '../../../../components/Title'
@@ -13,7 +12,6 @@ export interface BasicInfoState {
   birthDate: string
   race: string
   gestationalAge: string
-  abortionHistory: boolean
   lastPregnancy: string
 }
 
@@ -22,7 +20,6 @@ interface BasicInfoAction {
   | 'SET_BIRTH_DATE'
   | 'SET_RACE'
   | 'SET_GESTATIONAL_AGE'
-  | 'SET_ABORTION_HISTORY'
   | 'SET_LAST_PREGNANCY'
   payload: any
 }
@@ -38,8 +35,6 @@ export function BasicInfo ({ navigation }: AssistanceStackScreenProps<'BasicInfo
         return { ...state, race: action.payload }
       case 'SET_GESTATIONAL_AGE':
         return { ...state, gestationalAge: action.payload }
-      case 'SET_ABORTION_HISTORY':
-        return { ...state, abortionHistory: action.payload }
       case 'SET_LAST_PREGNANCY':
         return { ...state, lastPregnancy: action.payload }
       default:
@@ -50,7 +45,6 @@ export function BasicInfo ({ navigation }: AssistanceStackScreenProps<'BasicInfo
     birthDate: '',
     race: '',
     gestationalAge: '',
-    abortionHistory: false,
     lastPregnancy: ''
   })
 
@@ -122,11 +116,6 @@ export function BasicInfo ({ navigation }: AssistanceStackScreenProps<'BasicInfo
         onChangeText={(text) => { dispatch({ type: 'SET_GESTATIONAL_AGE', payload: text }) }}
         leftHint='Em semanas'
         keyboardType='numeric'
-      />
-      <Switch
-        value={state.abortionHistory}
-        onToggle={() => { dispatch({ type: 'SET_ABORTION_HISTORY', payload: !(state.abortionHistory as boolean) }) }}
-        text="História de abortamento?"
       />
       <Dropdown
         items={lastPregnancyOptions}
