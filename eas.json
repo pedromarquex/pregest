@@ -17,7 +17,14 @@
     "preview4": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "android": {
+        "autoIncrement": true
+      },
+      "ios": {
+        "autoIncrement": true
+      }
+    }
   },
   "cli": {
     "promptToConfigurePushNotifications": false

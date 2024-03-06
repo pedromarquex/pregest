@@ -16,7 +16,8 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.appsigest.pregest"
+      "bundleIdentifier": "com.appsigest.pregest",
+      "buildNumber": "2"
     },
     "android": {
       "adaptiveIcon": {
